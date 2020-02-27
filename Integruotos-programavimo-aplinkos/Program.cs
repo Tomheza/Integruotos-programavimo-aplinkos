@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Integruotos_programavimo_aplinkos.helper;
+using System;
 
 namespace Integruotos_programavimo_aplinkos
 {
@@ -6,7 +7,9 @@ namespace Integruotos_programavimo_aplinkos
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ScreenManager screen = new ScreenManager();
+            screen.printResults(new System.Collections.Generic.List<Student>());
         }
+
     }
 }
