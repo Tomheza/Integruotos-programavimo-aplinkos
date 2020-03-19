@@ -4,12 +4,81 @@ using System.Text;
 
 namespace Integruotos_programavimo_aplinkos
 {
-    class Student
+    class Student : Grades
     {
         public string name { get; set; }
         public string surname { get; set; }
-        public Grades grades;
-        public double ExamGrade
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="name">Student name</param>
+        /// <param name="surname">Student surname</param>
+        /// <param name="grade">Student laboratory grade</param>
+        /// <param name="exam">Student exam grade</param>
+        /// <param name="grades">Grades list</param>
+        public Student(string name, string surname, double grade, double exam, List<double> grades)
+        {
+            if (!string.IsNullOrEmpty(name))
+                this.name = name;
+            
+            if(!string.IsNullOrEmpty(surname))
+                this.surname = surname;
+            
+            if(grade >= 0)
+                this.grade = grade;
+            
+            if(exam >= 0)
+                this.exam = exam;
+
+            if(grades != null)
+            {
+                this.grades = grades;
+
+                foreach (var item in grades)
+                    this.grade += item;
+
+                this.grade /= grades.Count;
+            }
+        }
+
+        /// <summary>
+        /// Adding student data via array
+        /// </summary>
+        /// <param name="name">Student name</param>
+        /// <param name="surname">Student surname</param>
+        /// <param name="grade">Student laboratory grade</param>
+        /// <param name="exam">Student exam grade</param>
+        /// <param name="gradesArr">Grades array</param>
+        public Student(string name, string surname, double grade, double exam, double []gradesArr)
+        {
+            if (!string.IsNullOrEmpty(name))
+                this.name = name;
+
+            if (!string.IsNullOrEmpty(surname))
+                this.surname = surname;
+
+            if (grade >= 0)
+                this.grade = grade;
+
+            if (exam >= 0)
+                this.exam = exam;
+
+            if (gradesArr != null)
+            {
+                this.gradesArr = gradesArr;
+
+                foreach (var item in gradesArr)
+                    this.grade += item;
+
+                this.grade /= gradesArr.Length;
+            }
+        }
+
+        #region unused
+
+        //public Grades grades;
+
+        /*public double ExamGrade
         {
             get
             {
@@ -57,6 +126,7 @@ namespace Integruotos_programavimo_aplinkos
             grades.grade = grade;
             grades.exam = exam;
         }
-
+        */
+        #endregion
     }
 }
