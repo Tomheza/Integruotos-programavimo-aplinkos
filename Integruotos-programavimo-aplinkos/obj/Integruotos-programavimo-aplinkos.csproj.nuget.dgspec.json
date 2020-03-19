@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\e0071444\\source\\repos\\Integruotos-programavimo-aplinkos\\Integruotos-programavimo-aplinkos\\Integruotos-programavimo-aplinkos.csproj": {}
+    "C:\\Users\\e0071444\\Source\\Repos\\domis045\\Integruotos-programavimo-aplinkos\\Integruotos-programavimo-aplinkos\\Integruotos-programavimo-aplinkos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\e0071444\\source\\repos\\Integruotos-programavimo-aplinkos\\Integruotos-programavimo-aplinkos\\Integruotos-programavimo-aplinkos.csproj": {
+    "C:\\Users\\e0071444\\Source\\Repos\\domis045\\Integruotos-programavimo-aplinkos\\Integruotos-programavimo-aplinkos\\Integruotos-programavimo-aplinkos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\e0071444\\source\\repos\\Integruotos-programavimo-aplinkos\\Integruotos-programavimo-aplinkos\\Integruotos-programavimo-aplinkos.csproj",
+        "projectUniqueName": "C:\\Users\\e0071444\\Source\\Repos\\domis045\\Integruotos-programavimo-aplinkos\\Integruotos-programavimo-aplinkos\\Integruotos-programavimo-aplinkos.csproj",
         "projectName": "Integruotos-programavimo-aplinkos",
-        "projectPath": "C:\\Users\\e0071444\\source\\repos\\Integruotos-programavimo-aplinkos\\Integruotos-programavimo-aplinkos\\Integruotos-programavimo-aplinkos.csproj",
+        "projectPath": "C:\\Users\\e0071444\\Source\\Repos\\domis045\\Integruotos-programavimo-aplinkos\\Integruotos-programavimo-aplinkos\\Integruotos-programavimo-aplinkos.csproj",
         "packagesPath": "C:\\Users\\e0071444\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\e0071444\\source\\repos\\Integruotos-programavimo-aplinkos\\Integruotos-programavimo-aplinkos\\obj\\",
+        "outputPath": "C:\\Users\\e0071444\\Source\\Repos\\domis045\\Integruotos-programavimo-aplinkos\\Integruotos-programavimo-aplinkos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
