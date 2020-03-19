@@ -7,26 +7,26 @@ namespace Integruotos_programavimo_aplinkos
 {
     class Students
     {
-        public List<Student> students = new List<Student>();
 
         public void AddStudent(Student stud)
         {
-            if(!students.Contains(stud))
-                students.Add(stud);
+            if(!Program.students.Contains(stud))
+                Program.students.Add(stud);
         }
 
         public void RemoveStudent(string name, string surname)
         {
-            foreach (var item in students)
+            foreach (var item in Program.students)
             {
                 if (item.name.Equals(name) && item.surname.Equals(surname))
                 {
-                    students.Remove(item);
+                    Program.students.Remove(item);
                     break;
                 }
             }
         }
-
+        #region unused
+        /*
         public void ChangeExamGrade(string name, string surname, double grade)
         {
             foreach (var item in students)
@@ -50,17 +50,22 @@ namespace Integruotos_programavimo_aplinkos
                 }
             }
         }
+        */
+        #endregion
 
-        public void AddStudent(string name, string surname)
+
+        public void AddStudent(string name, string surname, double grade, double exam, List<double> grades)
         {
-            students.Add(new Student(name, surname));
+            Program.students.Add(new Student(name, surname, grade, exam, grades));
         }
 
-        public void AddStudent(string name, string surname, double grade, double exam)
+        public void AddStudent(string name, string surname, double grade, double exam, double []gradesArr)
         {
-            students.Add(new Student(name, surname, grade, exam));
+            Program.students.Add(new Student(name, surname, grade, exam, gradesArr));
         }
 
+        #region unused
+        /*
         public void ChangeStudentName(string name, string surname, string newname)
         {
             foreach (var item in students)
@@ -83,7 +88,7 @@ namespace Integruotos_programavimo_aplinkos
                     break;
                 }
             }
-        }
-
+        }*/
+        #endregion
     }
 }
