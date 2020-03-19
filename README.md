@@ -1,30 +1,30 @@
 # Integruotos-programavimo-aplinkos
-## Uşduoties formuluotë
-> Parağykite programà, kuri nuskaito ğiuos studentø duomenis:
-**`vardà`** ir **`pavardæ`**
- **n** atliktø namø darbø (nd) rezultatus (10-balëje sistemoje), o taip pat egzamino (egz) rezultatà.
-Tuomet iğ ğiø duomenø, suskaièiuoja galutiná balà **`(galutinis)`**:
+## UÅ¾duoties formuluotÄ—
+> ParaÅ¡ykite programÄ…, kuri nuskaito Å¡iuos studentÅ³ duomenis:
+**`vardÄ…`** ir **`pavardÄ™`**
+ **n** atliktÅ³ namÅ³ darbÅ³ (nd) rezultatus (10-balÄ—je sistemoje), o taip pat egzamino (egz) rezultatÄ….
+Tuomet iÅ¡ Å¡iÅ³ duomenÅ³, suskaiÄiuoja galutinÄ¯ balÄ… **`(galutinis)`**:
 
 #### *Galutinis = 0.3 * Vidurkis + 0.7 * Egzaminas*
 ## Functions
 | ------ | ------ | ------ |
 | ------ | ------ | ------ |
-| addStudent() | Prideda studentà prie gobalaus List kreipiantis á `AddStudent()` funkcijà| Integruotos_programavimo_aplinkos.helper.ScreenManager |
-| AddStudent() | Prideda studentà á globalø List | Integruotos_programavimo_aplinkos.Students |
-| addStudentArr() | Prideda studentà á globalø List naudojant masyvà | Integruotos_programavimo_aplinkos.helper.ScreenManager |
-| addStudentRnd() | Prideda studentà RND duomenim | Integruotos_programavimo_aplinkos.helper.ScreenManager |
-| Galutinis() | Apskaièiuoja galutiná balà palei formulæ `*Galutinis = 0.3 * Vidurkis + 0.7 * Egzaminas*` | Integruotos_programavimo_aplinkos.helper.Formulas |
-| Galutinis_mediana() | Apskaièiuoja galutiná balà mediana | Integruotos_programavimo_aplinkos.helper.Formulas |
-| Galutinis_mediana_arr() | Apskaièiuoja galutiná balà mediana, naudojant masyvà| Integruotos_programavimo_aplinkos.helper.Formulas |
-| menu() | Pagrindinë meniu funkcija | Integruotos_programavimo_aplinkos.helper.ScreenManager |
-| pause() | Padaro console lange pauzæ | Integruotos_programavimo_aplinkos.helper.ScreenManager |
-| pauseClear() | Padaro console lange pauzæ su ekrano iğvalymu | Integruotos_programavimo_aplinkos.helper.ScreenManager |
-| printHelp() | Atspausdina pagalbinæ informacijà (komandos) | Integruotos_programavimo_aplinkos.helper.ScreenManager |
+| addStudent() | Prideda studentÄ… prie gobalaus List kreipiantis Ä¯ `AddStudent()` funkcijÄ…| Integruotos_programavimo_aplinkos.helper.ScreenManager |
+| AddStudent() | Prideda studentÄ… Ä¯ globalÅ³ List | Integruotos_programavimo_aplinkos.Students |
+| addStudentArr() | Prideda studentÄ… Ä¯ globalÅ³ List naudojant masyvÄ… | Integruotos_programavimo_aplinkos.helper.ScreenManager |
+| addStudentRnd() | Prideda studentÄ… RND duomenim | Integruotos_programavimo_aplinkos.helper.ScreenManager |
+| Galutinis() | ApskaiÄiuoja galutinÄ¯ balÄ… palei formulÄ™ `*Galutinis = 0.3 * Vidurkis + 0.7 * Egzaminas*` | Integruotos_programavimo_aplinkos.helper.Formulas |
+| Galutinis_mediana() | ApskaiÄiuoja galutinÄ¯ balÄ… mediana | Integruotos_programavimo_aplinkos.helper.Formulas |
+| Galutinis_mediana_arr() | ApskaiÄiuoja galutinÄ¯ balÄ… mediana, naudojant masyvÄ…| Integruotos_programavimo_aplinkos.helper.Formulas |
+| menu() | PagrindinÄ— meniu funkcija | Integruotos_programavimo_aplinkos.helper.ScreenManager |
+| pause() | Padaro console lange pauzÄ™ | Integruotos_programavimo_aplinkos.helper.ScreenManager |
+| pauseClear() | Padaro console lange pauzÄ™ su ekrano iÅ¡valymu | Integruotos_programavimo_aplinkos.helper.ScreenManager |
+| printHelp() | Atspausdina pagalbinÄ™ informacijÄ… (komandos) | Integruotos_programavimo_aplinkos.helper.ScreenManager |
 | printMenu() | Atspausdina meniu | Integruotos_programavimo_aplinkos.helper.ScreenManager |
 | printResults() | Atspausdina rezultatus (studentu duomenis) | Integruotos_programavimo_aplinkos.helper.ScreenManager |
-| printResultsMediana() | Atspausdina studentø duomenis mediana | Integruotos_programavimo_aplinkos.helper.ScreenManager |
-|  printResultsMedianaArr() | Atspausdina studentø duomenis mediana, naudojant masyvà| Integruotos_programavimo_aplinkos.helper.ScreenManager |
-| RemoveStudent() | Pağalina studentà | Integruotos_programavimo_aplinkos.Students |
+| printResultsMediana() | Atspausdina studentÅ³ duomenis mediana | Integruotos_programavimo_aplinkos.helper.ScreenManager |
+|  printResultsMedianaArr() | Atspausdina studentÅ³ duomenis mediana, naudojant masyvÄ…| Integruotos_programavimo_aplinkos.helper.ScreenManager |
+| RemoveStudent() | PaÅ¡alina studentÄ… | Integruotos_programavimo_aplinkos.Students |
 | ScreenManager() | Konstruktorius | Integruotos_programavimo_aplinkos.helper.ScreenManager |
 | Student() | Konstruktorius |Integruotos_programavimo_aplinkos.Student |
 
