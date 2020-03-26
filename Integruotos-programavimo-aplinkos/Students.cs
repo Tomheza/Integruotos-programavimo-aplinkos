@@ -8,6 +8,12 @@ namespace Integruotos_programavimo_aplinkos
     class Students
     {
 
+        public void SortStudents()
+        {
+            //Program.students.Sort();
+            Program.students = Program.students.OrderBy(o => o.name).OrderBy(o => o.surname).ToList();
+        }
+
         public void AddStudent(Student stud)
         {
             if(!Program.students.Contains(stud))
@@ -57,11 +63,6 @@ namespace Integruotos_programavimo_aplinkos
         public void AddStudent(string name, string surname, double grade, double exam, List<double> grades)
         {
             Program.students.Add(new Student(name, surname, grade, exam, grades));
-        }
-
-        public void AddStudent(string name, string surname, double grade, double exam, double []gradesArr)
-        {
-            Program.students.Add(new Student(name, surname, grade, exam, gradesArr));
         }
 
         #region unused

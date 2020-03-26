@@ -6,6 +6,6 @@ namespace Integruotos_programavimo_aplinkos.helper
 {
     public static class Settings
     {
-        public static string version { get; set; } = "v0.1";
+        public static string version { get; set; } = "v0.2";
     }
 }
