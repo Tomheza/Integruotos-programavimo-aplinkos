@@ -120,34 +120,6 @@ namespace Integruotos_programavimo_aplinkos.helper
                 grades.Add(double.Parse(stud_data[i]));
             studentsController.AddStudent(new Student(name, surname, 0, exam, grades));
         }
-        public void addStudentArr()
-        {
-            Console.WriteLine("Iveskite studento duomenis: Vardas Pavarde [[n]-balai] [egz balas]");
-            Console.WriteLine("Pvz: Vardas1                 Pavarde1                      9         1         9        10         8         7         5");
-            string data = Console.ReadLine();
-            //string data = @"Vardas1                 Pavarde1                      9         1         9        10         8         7         5";
-            var stud_data = data.Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
-
-            string name = stud_data[0];
-            string surname = stud_data[1];
-
-            double exam = double.Parse(stud_data.Last());
-
-            double[] grades = { };
-            Array.Resize(ref grades, stud_data.Length - 3);
-
-            int j = 3;
-            for (int i = 2; i < stud_data.Length - 1; i++)
-            {
-                grades[j - 3] = double.Parse(stud_data[i]);
-                j++;
-            }
-                
-            
-            studentsController.AddStudent(new Student(name, surname, 0, exam, grades));
-
-        }
-
         public void addStudentRnd()
         {
             Console.WriteLine("Iveskite studento duomenis: Vardas Pavarde");
@@ -189,10 +161,7 @@ namespace Integruotos_programavimo_aplinkos.helper
                     case "add":
                         addStudent();
                         break;
-                    case "addarr":
-                        addStudentArr();
-                        break;
-                    
+
                     case "addrnd":
                         addStudentRnd();
                         break;
