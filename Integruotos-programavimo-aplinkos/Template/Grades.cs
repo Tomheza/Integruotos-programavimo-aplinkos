@@ -8,16 +8,6 @@ namespace Integruotos_programavimo_aplinkos
     {
         public double grade { get; set; }
         public double exam { get; set; }
-        public Grades()
-        {
-
-        }
-
-        public Grades(double grade, double exam)
-        {
-            this.grade = grade;
-            this.exam = exam;
-        }
- 
+        public List<double> grades { get; set; }
     }
 }
