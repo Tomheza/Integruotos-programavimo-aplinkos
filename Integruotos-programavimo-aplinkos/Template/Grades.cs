@@ -9,6 +9,5 @@ namespace Integruotos_programavimo_aplinkos
         public double grade { get; set; }
         public double exam { get; set; }
         public List<double> grades { get; set; }
-        public double []gradesArr { get; set; }
     }
 }

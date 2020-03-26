@@ -6,4 +6,10 @@
     <RootNamespace>Integruotos_programavimo_aplinkos</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Update="studentai.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
