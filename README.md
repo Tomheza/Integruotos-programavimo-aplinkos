@@ -11,7 +11,6 @@ Tuomet iš šių duomenų, suskaičiuoja galutinį balą **`(galutinis)`**:
 | ------ | ------ | ------ |
 | addStudent() | Prideda studentą prie gobalaus List kreipiantis į `AddStudent()` funkciją| Integruotos_programavimo_aplinkos.helper.ScreenManager |
 | AddStudent() | Prideda studentą į globalų List | Integruotos_programavimo_aplinkos.Students |
-| addStudentArr() | Prideda studentą į globalų List naudojant masyvą | Integruotos_programavimo_aplinkos.helper.ScreenManager |
 | addStudentRnd() | Prideda studentą RND duomenim | Integruotos_programavimo_aplinkos.helper.ScreenManager |
 | Galutinis() | Apskaičiuoja galutinį balą palei formulę `*Galutinis = 0.3 * Vidurkis + 0.7 * Egzaminas*` | Integruotos_programavimo_aplinkos.helper.Formulas |
 | Galutinis_mediana() | Apskaičiuoja galutinį balą mediana | Integruotos_programavimo_aplinkos.helper.Formulas |
@@ -108,10 +107,6 @@ Integruotos_programavimo_aplinkos.helper.ScreenManager.ScreenManager()
 #### addStudent()
 ```csharp
 Integruotos_programavimo_aplinkos.helper.ScreenManager.addStudent()
-```
-#### addStudentArr()
-```csharp
-Integruotos_programavimo_aplinkos.helper.ScreenManager.addStudentArr()
 ```
 #### addStudentRnd()
 ```csharp
