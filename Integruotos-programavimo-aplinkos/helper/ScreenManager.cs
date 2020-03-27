@@ -150,29 +150,44 @@ namespace Integruotos_programavimo_aplinkos.helper
 
         public void addstudentsIO()
         {
-            string[] lines = File.ReadAllLines("studentai.txt");
-            lines = lines.Skip(1).ToArray(); // remove first
-            Console.WriteLine("Found: " + lines.Length);
-            Console.WriteLine("Loading...");
-            foreach (string line in lines)
+            try
             {
-                var stud_data = line.Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
+                string[] lines = File.ReadAllLines("studentai.txt");
+                lines = lines.Skip(1).ToArray(); // remove first
+                Console.WriteLine("Found: " + lines.Length);
+                Console.WriteLine("Loading...");
+                foreach (string line in lines)
+                {
+                    var stud_data = line.Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
 
-                string name = stud_data[0];
-                string surname = stud_data[1];
+                    string name = stud_data[0];
+                    string surname = stud_data[1];
 
-                double exam = double.Parse(stud_data.Last());
+                    double exam = double.Parse(stud_data.Last());
 
-                List<double> grades = new List<double>();
+                    List<double> grades = new List<double>();
 
-                for (int i = 2; i < stud_data.Length - 1; i++)
-                    grades.Add(double.Parse(stud_data[i]));
-                studentsController.AddStudent(new Student(name, surname, 0, exam, grades));
+                    for (int i = 2; i < stud_data.Length - 1; i++)
+                        grades.Add(double.Parse(stud_data[i]));
+                    studentsController.AddStudent(new Student(name, surname, 0, exam, grades));
+                }
+
+                studentsController.SortStudents();
+
+                Console.WriteLine("Done");
             }
-
-            studentsController.SortStudents();
-            
-            Console.WriteLine("Done");
+            catch (FileNotFoundException ex)
+            {
+                Console.WriteLine("File not found: {0}", ex);
+            }
+            catch(IOException ex)
+            {
+                Console.WriteLine("IO exception: {0}", ex);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Generic execption: {0}", ex);
+            }
         }
 
         public void menu()
