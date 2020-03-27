@@ -23,49 +23,9 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "Integruotos-programavimo-aplinkos", "index.html", [
-    [ "Integruotos-programavimo-aplinkos", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html", [
+    [ "Integruotos-programavimo-aplinkos v0.2 versija", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html", [
       [ "Užduoties formuluotė", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md1", null ],
-      [ "Functions", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md3", null ],
-      [ "Variables", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md4", null ],
-      [ "Properties", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md5", null ],
-      [ "Integruotos_programavimo_aplinkos.helper.Formulas Class Reference", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md6", null ],
-      [ "Integruotos_programavimo_aplinkos.helper.ScreenManager Class Reference", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md10", [
-        [ "Public Member Functions", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md11", null ],
-        [ "Public Attributes", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md12", [
-          [ "<em>Galutinis = 0.3 * Vidurkis + 0.7 * Egzaminas</em>", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md2", null ],
-          [ "Galutinis()", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md7", null ],
-          [ "Galutinis_mediana()", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md8", null ],
-          [ "Galutinis_mediana_arr()", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md9", null ],
-          [ "Students", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md13", null ]
-        ] ],
-        [ "Constructor & Destructor Documentation", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md14", [
-          [ "ScreenManager()", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md15", null ],
-          [ "addStudent()", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md16", null ],
-          [ "addStudentRnd()", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md17", null ],
-          [ "menu()", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md18", null ],
-          [ "pause()", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md19", null ],
-          [ "pauseClear()", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md20", null ],
-          [ "printHelp()", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md21", null ],
-          [ "printMenu()", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md22", null ],
-          [ "printResults()", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md23", null ],
-          [ "printResultsMediana()", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md24", null ],
-          [ "printResultsMedianaArr()", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md25", null ]
-        ] ]
-      ] ],
-      [ "Integruotos_programavimo_aplinkos.Grades Class Reference", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md26", [
-        [ "Properties", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md27", null ]
-      ] ],
-      [ "Integruotos_programavimo_aplinkos.Program Class Reference", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md28", null ],
-      [ "Integruotos_programavimo_aplinkos.Student Class Reference", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md29", [
-        [ "Properties", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md30", [
-          [ "Properties inherited from Integroutos_programavimo_aplinkos.Grades", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md31", null ]
-        ] ],
-        [ "Constructor & Destructor Documentation", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md32", [
-          [ "Student() [1/2]", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md33", null ],
-          [ "Student() [2/2]", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md34", null ]
-        ] ]
-      ] ],
-      [ "Integruotos_programavimo_aplinkos.Students Class Reference", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md35", null ]
+      [ "Užduotis v0.2 versijai", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md3", null ]
     ] ],
     [ "Packages", "namespaces.html", [
       [ "Packages", "namespaces.html", "namespaces_dup" ]
