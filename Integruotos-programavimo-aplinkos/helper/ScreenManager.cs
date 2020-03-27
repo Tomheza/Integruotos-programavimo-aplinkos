@@ -103,60 +103,13 @@ namespace Integruotos_programavimo_aplinkos.helper
 
         public void addStudent()
         {
-            Console.WriteLine("Iveskite studento duomenis: Vardas Pavarde [[n]-balai] [egz balas]");
-            Console.WriteLine("Pvz: Vardas1                 Pavarde1                      9         1         9        10         8         7         5");
-            string data = Console.ReadLine();
-            //string data = @"Vardas1                 Pavarde1                      9         1         9        10         8         7         5";
-            var stud_data = data.Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
-
-            string name = stud_data[0];
-            string surname = stud_data[1];
-
-            double exam = double.Parse(stud_data.Last());
-
-            List<double> grades = new List<double>();
-            
-            for (int i = 2; i < stud_data.Length - 1; i++)
-                grades.Add(double.Parse(stud_data[i]));
-            studentsController.AddStudent(new Student(name, surname, 0, exam, grades));
-        }
-        public void addStudentRnd()
-        {
-            Console.WriteLine("Iveskite studento duomenis: Vardas Pavarde");
-            
-            string data = Console.ReadLine();
-            var stud_data = data.Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
-
-            string name = stud_data[0];
-            string surname = stud_data[1];
-
-            Random rnd = new Random();
-
-            double exam = rnd.Next(0, 11);
-
-
-            List<double> grades = new List<double>
-            { 
-                rnd.Next(0, 11), 
-                rnd.Next(0, 11), 
-                rnd.Next(0, 11), 
-                rnd.Next(0, 11), 
-                rnd.Next(0, 11), 
-                rnd.Next(0, 11) 
-            };
-
-            studentsController.AddStudent(new Student(name, surname, 0, exam, grades));
-        }
-
-        public void addstudentsIO()
-        {
-            string[] lines = File.ReadAllLines("studentai.txt");
-            lines = lines.Skip(1).ToArray(); // remove first
-            Console.WriteLine("Found: " + lines.Length);
-            Console.WriteLine("Loading...");
-            foreach (string line in lines)
+            try
             {
-                var stud_data = line.Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
+                Console.WriteLine("Iveskite studento duomenis: Vardas Pavarde [[n]-balai] [egz balas]");
+                Console.WriteLine("Pvz: Vardas1                 Pavarde1                      9         1         9        10         8         7         5");
+                string data = Console.ReadLine();
+                //string data = @"Vardas1                 Pavarde1                      9         1         9        10         8         7         5";
+                var stud_data = data.Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
 
                 string name = stud_data[0];
                 string surname = stud_data[1];
@@ -169,10 +122,139 @@ namespace Integruotos_programavimo_aplinkos.helper
                     grades.Add(double.Parse(stud_data[i]));
                 studentsController.AddStudent(new Student(name, surname, 0, exam, grades));
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Generic error:" + ex.Message);
+                Console.WriteLine("Try again? [yes / no]");
+                if (Console.ReadLine().Contains("yes"))
+                    addStudent();
+            }
+        }
+        public void addStudentRnd()
+        {
+            try
+            {
+                string data = null;
+                string name = null;
+                string surname = null;
 
-            studentsController.SortStudents();
+                Console.WriteLine("Iveskite studento duomenis: Vardas Pavarde");
+                try
+                {
+                    data = Console.ReadLine();
+                    var stud_data = data.Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
+
+                    name = stud_data[0];
+                    surname = stud_data[1];
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Blogai suvesti duomenys: Vardas Pavarde");
+                    Console.WriteLine(ex.Message);
+
+                    Console.WriteLine("Try again? [yes / no]");
+                    if (Console.ReadLine().Contains("yes"))
+                        addStudentRnd();
+                    
+                    return;
+                }
+
+                Random rnd = new Random();
+
+                double exam = rnd.Next(0, 11);
+
+
+                List<double> grades = new List<double>
+            {
+                rnd.Next(0, 11),
+                rnd.Next(0, 11),
+                rnd.Next(0, 11),
+                rnd.Next(0, 11),
+                rnd.Next(0, 11),
+                rnd.Next(0, 11)
+            };
+
+                studentsController.AddStudent(new Student(name, surname, 0, exam, grades));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Generic exception: " + ex.Message);
+                Console.WriteLine("Try again? [yes / no]");
+                if(Console.ReadLine().Contains("yes"))
+                    addStudentRnd();
+            }
             
-            Console.WriteLine("Done");
+        }
+
+        public void addstudentsIO()
+        {
+            try
+            {
+                string[] lines = null;
+                try
+                {
+                    lines = File.ReadAllLines("studentai.txt");
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("studentai.txt file not found, please enter the new file path");
+                    try
+                    {
+                        lines = File.ReadAllLines(Console.ReadLine());
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Try agian? [yes / no]");
+                        if(Console.ReadLine().Contains("yes"))
+                            addstudentsIO(); //recursion
+                        
+                        return;
+                    }
+                }
+
+                lines = lines.Skip(1).ToArray(); // remove first
+                Console.WriteLine("Found: " + lines.Length);
+                Console.WriteLine("Loading...");
+                foreach (string line in lines)
+                {
+                    try
+                    {
+                        var stud_data = line.Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
+
+                        string name = stud_data[0];
+                        string surname = stud_data[1];
+
+                        double exam = double.Parse(stud_data.Last());
+
+                        List<double> grades = new List<double>();
+
+                        for (int i = 2; i < stud_data.Length - 1; i++)
+                            grades.Add(double.Parse(stud_data[i]));
+                        studentsController.AddStudent(new Student(name, surname, 0, exam, grades));
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Bad student row...");
+                        Console.WriteLine(ex.Message);
+                    }
+                }
+
+                studentsController.SortStudents();
+
+                Console.WriteLine("Done");
+            }
+            catch (FileNotFoundException ex)
+            {
+                Console.WriteLine("File not found: {0}", ex.Message);
+            }
+            catch(IOException ex)
+            {
+                Console.WriteLine("IO exception: {0}", ex.Message);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Generic execption: {0}", ex.Message);
+            }
         }
 
         public void menu()
