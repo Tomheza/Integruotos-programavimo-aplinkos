@@ -1,4 +1,4 @@
-# Integruotos-programavimo-aplinkos v0.3 versija
+# Integruotos-programavimo-aplinkos v0.4 versija
 ## Užduoties formuluotė
 > Parašykite programą, kuri nuskaito šiuos studentų duomenis:
 **`vardą`** ir **`pavardę`**
