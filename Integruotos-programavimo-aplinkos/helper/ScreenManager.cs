@@ -257,6 +257,94 @@ namespace Integruotos_programavimo_aplinkos.helper
             }
         }
 
+        public static void GenerateSudentsIO(string filename, int count)
+        {
+            List<string> data = new List<string>() { "Vardas                   Pavarde                    ND1       ND2       ND3       ND4       ND5       ND6      Egz." };
+
+            for(int i = 0; i < count; i++)
+            {
+                Random rnd = new Random();
+                string vardas = "Vardas" + i;
+                string pavarde = "Pavarde" + i;
+                double exam = rnd.Next(0,11);
+                List<double> grades = new List<double>
+                {
+                    rnd.Next(0,11),
+                    rnd.Next(0,11),
+                    rnd.Next(0,11),
+                    rnd.Next(0,11),
+                    rnd.Next(0,11),
+                    rnd.Next(0,11),
+                };
+
+                string duom = vardas + "    " + pavarde + "    ";
+                foreach(double grade in grades)
+                {
+                    duom += grade + "    ";
+                }
+
+                duom += exam + "";
+                data.Add(duom);
+            }
+
+            string temp = "";
+
+            foreach (var item in data)
+            {
+                temp += item + "\n";
+            }
+
+            File.WriteAllText(filename + ".txt", temp);
+        }
+
+        public void GenerateStudentFiles()
+        {
+            Console.WriteLine("Select number of students to generate:");
+            Console.WriteLine("1 - 1000");
+            Console.WriteLine("2 - 10000");
+            Console.WriteLine("3 - 100000");
+            Console.WriteLine("4 - 1000000");
+            Console.WriteLine("5 - 10000000");
+            Console.WriteLine("6 - your wanted number");
+            try 
+            {
+                switch(Console.ReadLine())
+                {
+                    case"1":
+                        GenerateSudentsIO("1", 1000);
+                        break;
+                    case"2":
+                        GenerateSudentsIO("2", 10000);
+                        break;
+                    case"3":
+                        GenerateSudentsIO("3", 100000);
+                        break;
+                    case"4":
+                        GenerateSudentsIO("4", 1000000);
+                        break;
+                    case"5":
+                        GenerateSudentsIO("5", 10000000);
+                        break;
+                    case"6":
+                        break;
+
+                    default:
+                        Console.WriteLine("Bad command... Try again? [yes / no]");
+                        if(Console.ReadLine().Contains("yes"))
+                            GenerateStudentFiles(); //recursion
+                    break;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception has occured:" + ex.Message);
+                Console.WriteLine("Try agian? [yes / no]");
+                if(Console.ReadLine().Contains("yes"))
+                    GenerateStudentFiles(); //recursion
+                        return;
+            }
+        }
+
         public void menu()
         {
             bool running = true;
@@ -277,6 +365,10 @@ namespace Integruotos_programavimo_aplinkos.helper
 
                     case "addstudentsio":
                         addstudentsIO();
+                        break;
+
+                    case "genstudFile":
+                        GenerateStudentFiles();
                         break;
 
                     case "printMediana":
