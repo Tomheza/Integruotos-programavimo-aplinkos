@@ -1,4 +1,4 @@
-# Integruotos-programavimo-aplinkos v0.3 versija
+# Integruotos-programavimo-aplinkos v0.4 versija
 ## Užduoties formuluotė
 > Parašykite programą, kuri nuskaito šiuos studentų duomenis:
 **`vardą`** ir **`pavardę`**
@@ -7,22 +7,10 @@ Tuomet iš šių duomenų, suskaičiuoja galutinį balą **`(galutinis)`**:
 
 #### Dokumentaciją galima rasti releases puslapyje parsisiuntus **`documentation.rar (naudota Doxygen)`**
 
-# Užduotis v0.3 versijai
-### Atlikite versijos (v0.2) kodo reorganizavimą (refactoring'ą):
-#### Kur tikslinga, programoje naudokite (jeigu dar nenaudojote) struct'ūras;
-#### Funkcijas, naujus duomenų tipus (struct’ūras) perkelkite į  atskiru (.cs)  failus, t.y.  tokiu būduturėtumete sukurtame projekte turėti kelis *.cs failus.
-### Kur tikslinga, bent minimaliai panaudokite išimčių valdymą (angl. Exception, Exception Handling)
-```
-try{
-// Code to try goes here.
-}
-catch (SomeSpecificExceptionex)
-{
-// Code to handle the exception goes here.
-// Only catch exceptions that you know how to handle.
-// Never catch base class System.Exception without
-// rethrowing it at the end of the catch block.
-}
-```
-
-##### `Kam viso to reikia?` O pvz. kas atsitiks, jeigu failas, kurį bandote atidaryti neegzistuoja; arba bandotegauti masyvo elementą, kuris neegzistuoja?
+# Užduotis v0.4 versijai
+- Patobulinkite (jeigu reikia pagal v0.3  paskutinę užduotį turimą realizaciją) ir sugeneruokite penkis atsitiktinius studentų sąrašų failus, sudarytus iš: 1000, 10000, 100000, 1000000, 10000000 įrašų. Vardus ir Pavardes galite generuoti "šabloninius", kaip pvz. Vardas1 Pavarde1, Vardas2 Pavarde2 ir t.t.
+- Sūrušiuokite (padalinkite) studentus į dvi kategorijas:
+  - Studentai, kurių galutinis **balas < 5.0** galėtume vadinti “vargšiukai”, “nuskriaustukai” ir pan.
+  - Studentai, kurių galutinis **balas >= 5.0** galėtume vadinti "kietiakiai", "galvočiai" ir pan.
+- Surūšiuotus studentus išveskite į du naujus failus.
+- **Atlikite programos veikimo greičio (spartos) analizę:** t.y. išmatuokite (kuo tiksliau) **visos** programos **(t.y. failų kūrimą ir surūšiuotų studentų išvedimą į du naujus failus irgi reikia matuoti, tačiau tikšioje versijoje!)** veikimo laiką testuojant su šiais penkiais skirtingo įrašų dydžio duomenų failais.

@@ -23,9 +23,9 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "Integruotos-programavimo-aplinkos", "index.html", [
-    [ "Integruotos-programavimo-aplinkos v0.2 versija", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html", [
+    [ "Integruotos-programavimo-aplinkos v0.4 versija", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html", [
       [ "Užduoties formuluotė", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md1", null ],
-      [ "Užduotis v0.2 versijai", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md3", null ]
+      [ "Užduotis v0.4 versijai", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md3", null ]
     ] ],
     [ "Packages", "namespaces.html", [
       [ "Packages", "namespaces.html", "namespaces_dup" ]

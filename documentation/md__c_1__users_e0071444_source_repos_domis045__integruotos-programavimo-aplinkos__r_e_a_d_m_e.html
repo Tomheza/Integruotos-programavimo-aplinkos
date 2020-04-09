@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Integruotos-programavimo-aplinkos: Integruotos-programavimo-aplinkos v0.2 versija</title>
+<title>Integruotos-programavimo-aplinkos: Integruotos-programavimo-aplinkos v0.4 versija</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -82,7 +82,7 @@ $(document).ready(function(){initNavTree('md__c_1__users_e0071444_source_repos_d
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Integruotos-programavimo-aplinkos v0.2 versija </div>  </div>
+<div class="title">Integruotos-programavimo-aplinkos v0.4 versija </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="autotoc_md1"></a>
@@ -93,32 +93,18 @@ Užduoties formuluotė</h1>
 <p>**<code>vardą</code>** ir **<code>pavardę</code>** <b>n</b> atliktų namų darbų (nd) rezultatus (10-balėje sistemoje), o taip pat egzamino (egz) rezultatą. Tuomet iš šių duomenų, suskaičiuoja galutinį balą **<code>(galutinis)</code>**:</p>
 <h3><a class="anchor" id="autotoc_md2"></a>
 Dokumentaciją galima rasti releases puslapyje parsisiuntus **&lt;tt&gt;documentation.rar (naudota Doxygen)&lt;/tt&gt;**</h3>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Vardas </th><th class="markdownTableHeadNone">Pavardė </th><th class="markdownTableHeadNone">ND1 </th><th class="markdownTableHeadNone">ND2 </th><th class="markdownTableHeadNone">ND3 </th><th class="markdownTableHeadNone">ND4 </th><th class="markdownTableHeadNone">ND5 </th><th class="markdownTableHeadNone">Egzaminas  </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Vardas1 </td><td class="markdownTableBodyNone">Pavardė1 </td><td class="markdownTableBodyNone">8 </td><td class="markdownTableBodyNone">9 </td><td class="markdownTableBodyNone">10 </td><td class="markdownTableBodyNone">6 </td><td class="markdownTableBodyNone">10 </td><td class="markdownTableBodyNone">9  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Vardas2 </td><td class="markdownTableBodyNone">Pavardė2 </td><td class="markdownTableBodyNone">7 </td><td class="markdownTableBodyNone">10 </td><td class="markdownTableBodyNone">8 </td><td class="markdownTableBodyNone">5 </td><td class="markdownTableBodyNone">4 </td><td class="markdownTableBodyNone">6  </td></tr>
-</table>
-<p>|....|</p>
 <h1><a class="anchor" id="autotoc_md3"></a>
-Užduotis v0.2 versijai</h1>
-<h3><a class="anchor" id="autotoc_md4"></a>
-Papildykite programos versiją (v0.1) taip, kad būtų galima duomenis ne tik įvesti bet ir nuskaityti išfailo. Todėl sukurkite ir užpildykite failą studentai.txt, kurio (pleriminari) struktūra:</h3>
-<h3><a class="anchor" id="autotoc_md5"></a>
-Papildykite programą taip, kad nuskaičiuos duomenis iš failo, išvedimas pleriminariai atrodytų taip:</h3>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Pavardė </th><th class="markdownTableHeadNone">Vardas </th><th class="markdownTableHeadNone">Galutinis (Vid.) </th><th class="markdownTableHeadNone">Galutinis (Med.)  </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Sabonis </td><td class="markdownTableBodyNone">Arvydas </td><td class="markdownTableBodyNone">x.xx </td><td class="markdownTableBodyNone">x.xx  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Kurtinaitis </td><td class="markdownTableBodyNone">Rimas </td><td class="markdownTableBodyNone">y.yy </td><td class="markdownTableBodyNone">y.yy  </td></tr>
-</table>
-<p>| ....|</p>
-<h3><a class="anchor" id="autotoc_md6"></a>
-Reikalavimai output’ui: studentai turi būti surūšiuoti pagal vardus (ar pavardes) ir visi stulpeliai būtųgražiai "išlygiuoti".</h3>
+Užduotis v0.4 versijai</h1>
+<ul>
+<li>Patobulinkite (jeigu reikia pagal v0.3 paskutinę užduotį turimą realizaciją) ir sugeneruokite penkis atsitiktinius studentų sąrašų failus, sudarytus iš: 1000, 10000, 100000, 1000000, 10000000 įrašų. Vardus ir Pavardes galite generuoti "šabloninius", kaip pvz. Vardas1 Pavarde1, Vardas2 Pavarde2 ir t.t.</li>
+<li>Sūrušiuokite (padalinkite) studentus į dvi kategorijas:<ul>
+<li>Studentai, kurių galutinis <b>balas &lt; 5.0</b> galėtume vadinti “vargšiukai”, “nuskriaustukai” ir pan.</li>
+<li>Studentai, kurių galutinis <b>balas &gt;= 5.0</b> galėtume vadinti "kietiakiai", "galvočiai" ir pan.</li>
+</ul>
+</li>
+<li>Surūšiuotus studentus išveskite į du naujus failus.</li>
+<li><b>Atlikite programos veikimo greičio (spartos) analizę:</b> t.y. išmatuokite (kuo tiksliau) <b>visos</b> programos **(t.y. failų kūrimą ir surūšiuotų studentų išvedimą į du naujus failus irgi reikia matuoti, tačiau tikšioje versijoje!)** veikimo laiką testuojant su šiais penkiais skirtingo įrašų dydžio duomenų failais. </li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
