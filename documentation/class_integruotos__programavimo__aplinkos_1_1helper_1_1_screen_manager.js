@@ -4,6 +4,7 @@ var class_integruotos__programavimo__aplinkos_1_1helper_1_1_screen_manager =
     [ "addStudent", "class_integruotos__programavimo__aplinkos_1_1helper_1_1_screen_manager.html#acd516224eb66c14437580ed2526c0f51", null ],
     [ "addStudentRnd", "class_integruotos__programavimo__aplinkos_1_1helper_1_1_screen_manager.html#ad51d4616b47a61cd0b6e252d14588403", null ],
     [ "addstudentsIO", "class_integruotos__programavimo__aplinkos_1_1helper_1_1_screen_manager.html#a07e48cd3798cfeb490017784877dffd0", null ],
+    [ "GenerateStudentFiles", "class_integruotos__programavimo__aplinkos_1_1helper_1_1_screen_manager.html#adaeb479a798cd5f01d823cf02f0c1bc4", null ],
     [ "menu", "class_integruotos__programavimo__aplinkos_1_1helper_1_1_screen_manager.html#ab4a5fe83c4075e669fe502da01d58f26", null ],
     [ "pause", "class_integruotos__programavimo__aplinkos_1_1helper_1_1_screen_manager.html#aed5c13e141129a5c57bf6f7876427ee1", null ],
     [ "pauseClear", "class_integruotos__programavimo__aplinkos_1_1helper_1_1_screen_manager.html#a20c0c438bc214d4704592e927dec9de8", null ],

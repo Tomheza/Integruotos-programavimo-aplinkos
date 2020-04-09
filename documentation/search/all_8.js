@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['readme_2emd_27',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['removestudent_28',['RemoveStudent',['../class_integruotos__programavimo__aplinkos_1_1_students.html#acd508bd8f3fd0f9f0d13d7b54864df6d',1,'Integruotos_programavimo_aplinkos::Students']]]
+  ['name_24',['name',['../class_integruotos__programavimo__aplinkos_1_1_student.html#a25ff35b651aa14a14e30303bcd712f3e',1,'Integruotos_programavimo_aplinkos::Student']]],
+  ['newtimer_25',['NewTimer',['../class_integruotos__programavimo__aplinkos_1_1_program.html#a4db350e4fdeadfd8e0c4cafac8b9a6f6',1,'Integruotos_programavimo_aplinkos::Program']]]
 ];
