@@ -18,6 +18,7 @@ namespace Integruotos_programavimo_aplinkos.helper
         //List<Student> students
         public void printResultsAvg()
         {
+            Program.NewTimer();
             Console.WriteLine("{0, -15} {1, -15} {2, -20}", "Vardas", "Pavardė", "Galutinis (Vid.)");
             for (int i = 0; i <= 48; i++)
                 Console.Write("-");
@@ -26,6 +27,7 @@ namespace Integruotos_programavimo_aplinkos.helper
             {
                 Console.WriteLine("{0, -15} {1, -15} {2, -20}", item.name, item.surname, Formulas.Galutinis(item.grade, item.exam).ToString("0.00"));
             }
+            Program.StopTimer("printAvg");
         }
 
         public void printResults()
@@ -37,6 +39,7 @@ namespace Integruotos_programavimo_aplinkos.helper
             switch(Console.ReadLine())
             {
                 case "1":
+                    Program.NewTimer();
                     Console.WriteLine("{0, -15} {1, -15} {2, -20} {3, -20}", "Vardas", "Pavardė", "Galutinis (Vid.)", "Galutinis (Med.)");
                     for (int i = 0; i <= 68; i++)
                         Console.Write("-");
@@ -45,11 +48,13 @@ namespace Integruotos_programavimo_aplinkos.helper
                     {
                         Console.WriteLine("{0, -15} {1, -15} {2, -20} {3, -20}", item.name, item.surname, Formulas.Galutinis(item.grade, item.exam).ToString("0.00"), Formulas.Galutinis_mediana(item.grades, item.exam).ToString("0.00"));
                     }
+                    Program.StopTimer("print - 1");
                     break;
                 case "2":
                     Console.WriteLine("Save output to file? [yes / no]");
                     if(Console.ReadLine().Contains("yes"))
                     {
+                        Program.NewTimer();
                         string data = "Vardas    Pavarde    ND1    ND2    ND3    ND4    ND5    ND6    Egz.\n";
                         foreach(var item in Program.good_guys)
                         {
@@ -67,10 +72,12 @@ namespace Integruotos_programavimo_aplinkos.helper
                         {
                             Console.WriteLine("Generic exception: " + ex.Message);
                         }
+                        Program.StopTimer("print - 2 save to file");
                         
                     }
                     else
                     {
+                        Program.NewTimer();
                         Console.WriteLine("~printing good guys~");
                         Console.WriteLine("{0, -15} {1, -15} {2, -20} {3, -20}", "Vardas", "Pavardė", "Galutinis (Vid.)", "Galutinis (Med.)");
                         for (int i = 0; i <= 68; i++)
@@ -80,12 +87,14 @@ namespace Integruotos_programavimo_aplinkos.helper
                         {
                             Console.WriteLine("{0, -15} {1, -15} {2, -20} {3, -20}", item.name, item.surname, Formulas.Galutinis(item.grade, item.exam).ToString("0.00"), Formulas.Galutinis_mediana(item.grades, item.exam).ToString("0.00"));
                         }
+                        Program.StopTimer("print - 2");
                     }
                     break;
                 case "3":
                     Console.WriteLine("Save output to file? [yes / no]");
                     if(Console.ReadLine().Contains("yes"))
                     {
+                        Program.NewTimer();
                         string data = "Vardas    Pavarde    ND1    ND2    ND3    ND4    ND5    ND6    Egz.\n";
                         foreach(var item in Program.good_guys)
                         {
@@ -103,10 +112,12 @@ namespace Integruotos_programavimo_aplinkos.helper
                         {
                             Console.WriteLine("Generic exception: " + ex.Message);
                         }
+                        Program.StopTimer("print - 3 save to file");
                         
                     }
                     else    
                     {
+                        Program.NewTimer();
                         Console.WriteLine("~printing bad guys~");
                         Console.WriteLine("{0, -15} {1, -15} {2, -20} {3, -20}", "Vardas", "Pavardė", "Galutinis (Vid.)", "Galutinis (Med.)");
                         for (int i = 0; i <= 68; i++)
@@ -116,6 +127,7 @@ namespace Integruotos_programavimo_aplinkos.helper
                         {
                             Console.WriteLine("{0, -15} {1, -15} {2, -20} {3, -20}", item.name, item.surname, Formulas.Galutinis(item.grade, item.exam).ToString("0.00"), Formulas.Galutinis_mediana(item.grades, item.exam).ToString("0.00"));
                         }
+                        Program.StopTimer("print - 3");
                     }
                    
                     break;
@@ -129,34 +141,9 @@ namespace Integruotos_programavimo_aplinkos.helper
             
         }
 
-        public void printResultsGoodGuys()
-        {
-            Console.WriteLine("{0, -15} {1, -15} {2, -20} {3, -20}", "Vardas", "Pavardė", "Galutinis (Vid.)", "Galutinis (Med.)");
-            for (int i = 0; i <= 68; i++)
-                Console.Write("-");
-            Console.WriteLine("-");
-            foreach (var item in Program.students)
-            {
-                if(Formulas.Galutinis(item.grade, item.exam) >= 5.0)
-                    Console.WriteLine("{0, -15} {1, -15} {2, -20} {3, -20}", item.name, item.surname, Formulas.Galutinis(item.grade, item.exam).ToString("0.00"), Formulas.Galutinis_mediana(item.grades, item.exam).ToString("0.00"));
-            }
-        }
-        public void printResultsBadGuys()
-        {
-            Console.WriteLine("{0, -15} {1, -15} {2, -20} {3, -20}", "Vardas", "Pavardė", "Galutinis (Vid.)", "Galutinis (Med.)");
-            for (int i = 0; i <= 68; i++)
-                Console.Write("-");
-            Console.WriteLine("-");
-            foreach (var item in Program.students)
-            {
-                if (Formulas.Galutinis(item.grade, item.exam) < 5.0)
-                    Console.WriteLine("{0, -15} {1, -15} {2, -20} {3, -20}", item.name, item.surname, Formulas.Galutinis(item.grade, item.exam).ToString("0.00"), Formulas.Galutinis_mediana(item.grades, item.exam).ToString("0.00"));
-            }
-        }
-
-
         public void printResultsMediana()
         {
+            Program.NewTimer();
             Console.WriteLine("{0, -15} {1, -15} {2, -20}", "Vardas", "Pavardė", "Galutinis (Med.)");
             for (int i = 0; i <= 48; i++)
                 Console.Write("-");
@@ -165,19 +152,34 @@ namespace Integruotos_programavimo_aplinkos.helper
             {
                 Console.WriteLine("{0, -15} {1, -15} {2, -20}", item.name, item.surname, Formulas.Galutinis_mediana(item.grades, item.exam).ToString("0.00"));
             }
+            Program.StopTimer("printMediana");
         }
 
         public void printMenu()
         {
-            Console.WriteLine(Settings.version);
-            Thread.Sleep(1000);
-            Console.WriteLine("help - shows general help information");
-            Console.WriteLine("exit - exits this program");
-            Console.WriteLine("add - adds a new student to the list");
-            Console.WriteLine("addstudentsio - adds students from file: studentai.txt");
-            Console.WriteLine("addrnd - adds a new student with random data");
-            Console.WriteLine("printMediana - prints data from List mediana");
-            Console.WriteLine("print - prints data for students");
+            Console.Write(" ");
+            for (int i = 0; i < 59; i++)
+                Console.Write("-");
+            Console.WriteLine();
+            Console.WriteLine("| {0, 29} {1, 29}", "Menu ["+ Settings.version + "]", "|");
+            Console.Write(" ");
+            for (int i = 0; i < 59; i++)
+                Console.Write("-");
+            Console.WriteLine();
+            Console.WriteLine("| {0, -57} |", "help - shows general help information");
+            Console.WriteLine("| {0, -57} |", "exit - exits this program");
+            Console.WriteLine("| {0, -57} |", "add - adds a new student to the list");
+            Console.WriteLine("| {0, -57} |", "addstudentsio - adds students from file of your choice");
+            Console.WriteLine("| {0, -57} |", "addrnd - adds a new student with random data");
+            Console.WriteLine("| {0, -57} |", "genstudFile - generates a new student file");
+            Console.WriteLine("| {0, -57} |", "printMediana - prints data from List mediana");
+            Console.WriteLine("| {0, -57} |", "printAvg - prints data from List with avg");
+            Console.WriteLine("| {0, -57} |", "print - prints data for students");
+            Console.Write(" ");
+            for (int i = 0; i < 59; i++)
+                Console.Write("-");
+            Console.WriteLine();
+            Console.Write(" -> ");
             //pause();
         }
 
@@ -201,24 +203,40 @@ namespace Integruotos_programavimo_aplinkos.helper
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Clear();
-            Console.WriteLine(Settings.version);
-            Thread.Sleep(1000);
-            Console.WriteLine("help - shows general help information");
-            Console.WriteLine("exit - exits this program");
-            Console.WriteLine("add - adds a new student to the list");
-            Console.WriteLine("addstudentsio - adds students from file: studentai.txt");
-            Console.WriteLine("addrnd - adds a new student with random data");
-            Console.WriteLine("printMediana - prints data from List mediana");
-            Console.WriteLine("printAvg - prints data from List with avg");
-            Console.WriteLine("print - prints data for students");
+            Console.Write(" ");
+            for (int i = 0; i < 59; i++)
+                Console.Write("-");
+            Console.WriteLine();
+            Console.WriteLine("| {0, 29} {1, 29}", "Menu [" + Settings.version + "]", "|");
+            Console.Write(" ");
+            for (int i = 0; i < 59; i++)
+                Console.Write("-");
+            Console.WriteLine();
+            Console.WriteLine("| {0, -57} |", "help - shows general help information");
+            Console.WriteLine("| {0, -57} |", "exit - exits this program");
+            Console.WriteLine("| {0, -57} |", "add - adds a new student to the list");
+            Console.WriteLine("| {0, -57} |", "addstudentsio - adds students from file of your choice");
+            Console.WriteLine("| {0, -57} |", "addrnd - adds a new student with random data");
+            Console.WriteLine("| {0, -57} |", "genstudFile - generates a new student file");
+            Console.WriteLine("| {0, -57} |", "printMediana - prints data from List mediana");
+            Console.WriteLine("| {0, -57} |", "printAvg - prints data from List with avg");
+            Console.WriteLine("| {0, -57} |", "print - prints data for students");
+            Console.Write(" ");
+            for (int i = 0; i < 59; i++)
+                Console.Write("-");
+            Console.WriteLine();
+            Console.Write(" -> ");
 
-            pauseClear();
+
+            //pauseClear();
         }
 
         public void addStudent()
         {
             try
             {
+                Program.NewTimer();
+
                 Console.WriteLine("Iveskite studento duomenis: Vardas Pavarde [[n]-balai] [egz balas]");
                 Console.WriteLine("Pvz: Vardas1                 Pavarde1                      9         1         9        10         8         7         5");
                 string data = Console.ReadLine();
@@ -243,9 +261,12 @@ namespace Integruotos_programavimo_aplinkos.helper
                 if (Console.ReadLine().Contains("yes"))
                     addStudent();
             }
+
+            Program.StopTimer("addstudent");
         }
         public void addStudentRnd()
         {
+            Program.NewTimer();
             try
             {
                 string data = null;
@@ -297,7 +318,8 @@ namespace Integruotos_programavimo_aplinkos.helper
                 if(Console.ReadLine().Contains("yes"))
                     addStudentRnd();
             }
-            
+
+            Program.StopTimer("addrnd");
         }
 
         public void addstudentsIO()
@@ -320,7 +342,10 @@ namespace Integruotos_programavimo_aplinkos.helper
 
                 try
                 {
+                    Program.NewTimer();
                     lines = File.ReadAllLines(file_name + ".txt");
+                    Program.StopTimer("Read: " + file_name + ".txt");
+
                 }
                 catch (Exception)
                 {
@@ -339,6 +364,7 @@ namespace Integruotos_programavimo_aplinkos.helper
                     }
                 }
 
+                Program.NewTimer();
                 lines = lines.Skip(1).ToArray(); // remove first
                 Console.WriteLine("Found: " + lines.Length);
                 Console.WriteLine("Loading...");
@@ -365,8 +391,11 @@ namespace Integruotos_programavimo_aplinkos.helper
                         Console.WriteLine(ex.Message);
                     }
                 }
+                Program.StopTimer("Txt file parse");
 
+                Program.NewTimer();
                 studentsController.SortStudents();
+                Program.StopTimer("Sort all lists...");
 
                 Console.WriteLine("Done");
             }
@@ -386,6 +415,7 @@ namespace Integruotos_programavimo_aplinkos.helper
 
         public static void GenerateSudentsIO(string filename, int count)
         {
+            Program.NewTimer();
             List<string> data = new List<string>() { "Vardas    Pavarde    ND1    ND2    ND3    ND4    ND5    ND6    Egz." };
 
             for(int i = 0; i < count; i++)
@@ -420,8 +450,11 @@ namespace Integruotos_programavimo_aplinkos.helper
             {
                 temp += item + "\n";
             }
-
+            Program.StopTimer("Generate students ["+filename+".txt, "+ count +"] cycle");
+            Program.NewTimer();
             File.WriteAllText(filename + ".txt", temp);
+            Console.WriteLine("Succesfully wrote to: " + filename + ".txt");
+            Program.StopTimer("write to file: " + filename + ".txt");
         }
 
         public void GenerateStudentFiles()
@@ -453,6 +486,16 @@ namespace Integruotos_programavimo_aplinkos.helper
                         GenerateSudentsIO("5", 10000000);
                         break;
                     case"6":
+                        try 
+                        {
+                            Console.WriteLine("Please enter your wanted students count [ex 10]");
+                            int data = int.Parse(Console.ReadLine());
+                            GenerateSudentsIO(data + "", data);
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("Generic exception: " + ex.Message);
+                        }
                         break;
 
                     default:
