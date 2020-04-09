@@ -30,13 +30,127 @@ namespace Integruotos_programavimo_aplinkos.helper
 
         public void printResults()
         {
+            Console.WriteLine("Select what to print:");
+            Console.WriteLine("1 - print all students");
+            Console.WriteLine("2 - print 'Good guys'");
+            Console.WriteLine("3 - print 'Bad guys'");
+            switch(Console.ReadLine())
+            {
+                case "1":
+                    Console.WriteLine("{0, -15} {1, -15} {2, -20} {3, -20}", "Vardas", "Pavardė", "Galutinis (Vid.)", "Galutinis (Med.)");
+                    for (int i = 0; i <= 68; i++)
+                        Console.Write("-");
+                    Console.WriteLine("-");
+                    foreach (var item in Program.students)
+                    {
+                        Console.WriteLine("{0, -15} {1, -15} {2, -20} {3, -20}", item.name, item.surname, Formulas.Galutinis(item.grade, item.exam).ToString("0.00"), Formulas.Galutinis_mediana(item.grades, item.exam).ToString("0.00"));
+                    }
+                    break;
+                case "2":
+                    Console.WriteLine("Save output to file? [yes / no]");
+                    if(Console.ReadLine().Contains("yes"))
+                    {
+                        string data = "Vardas    Pavarde    ND1    ND2    ND3    ND4    ND5    ND6    Egz.\n";
+                        foreach(var item in Program.good_guys)
+                        {
+                            data += item.name + "    " + item.surname + "    ";
+                            foreach (var gr in item.grades)
+                                data += gr + "    ";
+                            data += item.exam + "\n";
+                        }
+                        try
+                        {
+                            File.WriteAllText("GoodGuys.txt", data);
+                            Console.WriteLine("File saved: GoodGuys.txt");
+                        }
+                        catch(Exception ex)
+                        {
+                            Console.WriteLine("Generic exception: " + ex.Message);
+                        }
+                        
+                    }
+                    else
+                    {
+                        Console.WriteLine("~printing good guys~");
+                        Console.WriteLine("{0, -15} {1, -15} {2, -20} {3, -20}", "Vardas", "Pavardė", "Galutinis (Vid.)", "Galutinis (Med.)");
+                        for (int i = 0; i <= 68; i++)
+                            Console.Write("-");
+                        Console.WriteLine("-");
+                        foreach (var item in Program.good_guys)
+                        {
+                            Console.WriteLine("{0, -15} {1, -15} {2, -20} {3, -20}", item.name, item.surname, Formulas.Galutinis(item.grade, item.exam).ToString("0.00"), Formulas.Galutinis_mediana(item.grades, item.exam).ToString("0.00"));
+                        }
+                    }
+                    break;
+                case "3":
+                    Console.WriteLine("Save output to file? [yes / no]");
+                    if(Console.ReadLine().Contains("yes"))
+                    {
+                        string data = "Vardas    Pavarde    ND1    ND2    ND3    ND4    ND5    ND6    Egz.\n";
+                        foreach(var item in Program.good_guys)
+                        {
+                            data += item.name + "    " + item.surname + "    ";
+                            foreach (var gr in item.grades)
+                                data += gr + "    ";
+                            data += item.exam + "\n";
+                        }
+                        try
+                        {
+                            File.WriteAllText("BadGuys.txt", data);
+                            Console.WriteLine("File saved: BadGuys.txt");
+                        }
+                        catch(Exception ex)
+                        {
+                            Console.WriteLine("Generic exception: " + ex.Message);
+                        }
+                        
+                    }
+                    else    
+                    {
+                        Console.WriteLine("~printing bad guys~");
+                        Console.WriteLine("{0, -15} {1, -15} {2, -20} {3, -20}", "Vardas", "Pavardė", "Galutinis (Vid.)", "Galutinis (Med.)");
+                        for (int i = 0; i <= 68; i++)
+                            Console.Write("-");
+                        Console.WriteLine("-");
+                        foreach (var item in Program.bad_guys)
+                        {
+                            Console.WriteLine("{0, -15} {1, -15} {2, -20} {3, -20}", item.name, item.surname, Formulas.Galutinis(item.grade, item.exam).ToString("0.00"), Formulas.Galutinis_mediana(item.grades, item.exam).ToString("0.00"));
+                        }
+                    }
+                   
+                    break;
+                default:
+                    Console.WriteLine("Bad command: Try again? [yes / no]");
+                    if(Console.ReadLine().Contains("yes"))
+                        printResults();
+                    break;
+            }
+            Console.WriteLine();
+            
+        }
+
+        public void printResultsGoodGuys()
+        {
             Console.WriteLine("{0, -15} {1, -15} {2, -20} {3, -20}", "Vardas", "Pavardė", "Galutinis (Vid.)", "Galutinis (Med.)");
             for (int i = 0; i <= 68; i++)
                 Console.Write("-");
             Console.WriteLine("-");
             foreach (var item in Program.students)
             {
-                Console.WriteLine("{0, -15} {1, -15} {2, -20} {3, -20}", item.name, item.surname, Formulas.Galutinis(item.grade, item.exam).ToString("0.00"), Formulas.Galutinis_mediana(item.grades, item.exam).ToString("0.00"));
+                if(Formulas.Galutinis(item.grade, item.exam) >= 5.0)
+                    Console.WriteLine("{0, -15} {1, -15} {2, -20} {3, -20}", item.name, item.surname, Formulas.Galutinis(item.grade, item.exam).ToString("0.00"), Formulas.Galutinis_mediana(item.grades, item.exam).ToString("0.00"));
+            }
+        }
+        public void printResultsBadGuys()
+        {
+            Console.WriteLine("{0, -15} {1, -15} {2, -20} {3, -20}", "Vardas", "Pavardė", "Galutinis (Vid.)", "Galutinis (Med.)");
+            for (int i = 0; i <= 68; i++)
+                Console.Write("-");
+            Console.WriteLine("-");
+            foreach (var item in Program.students)
+            {
+                if (Formulas.Galutinis(item.grade, item.exam) < 5.0)
+                    Console.WriteLine("{0, -15} {1, -15} {2, -20} {3, -20}", item.name, item.surname, Formulas.Galutinis(item.grade, item.exam).ToString("0.00"), Formulas.Galutinis_mediana(item.grades, item.exam).ToString("0.00"));
             }
         }
 
@@ -191,13 +305,26 @@ namespace Integruotos_programavimo_aplinkos.helper
             try
             {
                 string[] lines = null;
+                Console.WriteLine("Please enter file name to read... [ex. student]");
+
+                DirectoryInfo dinfo = new DirectoryInfo(Directory.GetCurrentDirectory());
+                FileInfo[] Files = dinfo.GetFiles("*.txt");
+                if (Files.Length > 0)
+                    Console.WriteLine("Found files:");
+                foreach (FileInfo file in Files)
+                {
+                    Console.WriteLine(file.Name);
+                }
+
+                string file_name = Console.ReadLine();
+
                 try
                 {
-                    lines = File.ReadAllLines("studentai.txt");
+                    lines = File.ReadAllLines(file_name + ".txt");
                 }
                 catch (Exception)
                 {
-                    Console.WriteLine("studentai.txt file not found, please enter the new file path");
+                    Console.WriteLine(file_name + ".txt file not found, please enter the new file path");
                     try
                     {
                         lines = File.ReadAllLines(Console.ReadLine());
@@ -259,7 +386,7 @@ namespace Integruotos_programavimo_aplinkos.helper
 
         public static void GenerateSudentsIO(string filename, int count)
         {
-            List<string> data = new List<string>() { "Vardas                   Pavarde                    ND1       ND2       ND3       ND4       ND5       ND6      Egz." };
+            List<string> data = new List<string>() { "Vardas    Pavarde    ND1    ND2    ND3    ND4    ND5    ND6    Egz." };
 
             for(int i = 0; i < count; i++)
             {
@@ -380,6 +507,7 @@ namespace Integruotos_programavimo_aplinkos.helper
                     case "print":
                         printResults();
                         break;
+
 
                     case "help":
                         printMenu();

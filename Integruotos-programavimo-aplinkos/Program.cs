@@ -7,6 +7,9 @@ namespace Integruotos_programavimo_aplinkos
     class Program
     {
         public static List<Student> students = new List<Student>();
+        public static List<Student> good_guys = new List<Student>();
+        public static List<Student> bad_guys = new List<Student>();
+
         static void Main(string[] args)
         {
             Console.Title = Settings.program_title;

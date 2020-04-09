@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Integruotos_programavimo_aplinkos.helper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,8 @@ namespace Integruotos_programavimo_aplinkos
             try
             {
                 Program.students = Program.students.OrderBy(o => o.name).OrderBy(o => o.surname).ToList();
-
+                Program.good_guys = Program.good_guys.OrderBy(o => o.name).OrderBy(o => o.surname).ToList();
+                Program.bad_guys = Program.bad_guys.OrderBy(o => o.name).OrderBy(o => o.surname).ToList();
             }
             catch (Exception ex)
             {
@@ -29,6 +31,15 @@ namespace Integruotos_programavimo_aplinkos
         {
             if(!Program.students.Contains(stud))
                 Program.students.Add(stud);
+
+            if (Formulas.Galutinis(stud.grade, stud.exam) < 5.0)
+            {
+                Program.bad_guys.Add(stud);
+            }
+            else if (Formulas.Galutinis(stud.grade, stud.exam) >= 5.0)
+            {
+                Program.good_guys.Add(stud);
+            }
         }
 
         public void RemoveStudent(string name, string surname)
@@ -75,7 +86,18 @@ namespace Integruotos_programavimo_aplinkos
         {
             try
             {
-                Program.students.Add(new Student(name, surname, grade, exam, grades));
+                Student student = new Student(name, surname, grade, exam, grades);
+                Program.students.Add(student);
+
+                if(Formulas.Galutinis(student.grade, student.exam) < 5.0)
+                {
+                    Program.bad_guys.Add(student);
+                }
+                else if(Formulas.Galutinis(student.grade, student.exam) >= 5.0)
+                {
+                    Program.good_guys.Add(student);
+                }
+                
             }
             catch (Exception ex)
             {
