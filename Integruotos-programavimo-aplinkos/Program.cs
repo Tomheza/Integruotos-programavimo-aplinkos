@@ -1,5 +1,6 @@
 ﻿using Integruotos_programavimo_aplinkos.helper;
 using Integruotos_programavimo_aplinkos.LinkedList;
+using Integruotos_programavimo_aplinkos.Queue;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -17,6 +18,11 @@ namespace Integruotos_programavimo_aplinkos
         public static LinkedList<StudentLinkedList> studentsLinkedList = new LinkedList<StudentLinkedList>();
         public static LinkedList<StudentLinkedList> good_guys_LinkedList = new LinkedList<StudentLinkedList>();
         public static LinkedList<StudentLinkedList> bad_guys_LinkedList = new LinkedList<StudentLinkedList>();
+
+        //Queue
+        public static Queue<StudentQueue> studentsQueue = new Queue<StudentQueue>();
+        public static Queue<StudentQueue> good_guys_Queue = new Queue<StudentQueue>();
+        public static Queue<StudentQueue> bad_guys_Queue = new Queue<StudentQueue>();
 
         public static Stopwatch watch;
 
@@ -77,7 +83,7 @@ namespace Integruotos_programavimo_aplinkos
             Console.WriteLine();
             Console.WriteLine("| {0, -57} |", "1. List<T>");
             Console.WriteLine("| {0, -57} |", "2. LinkedList<T>");
-            Console.WriteLine("| {0, -57} |", "2. Queue<T>");
+            Console.WriteLine("| {0, -57} |", "3. Queue<T>");
             for (int i = 0; i < 59; i++)
                 Console.Write("-");
             Console.WriteLine();
@@ -90,6 +96,9 @@ namespace Integruotos_programavimo_aplinkos
                     break;
                 case "2":
                     ScreenManagerLinkedList screenLinkdeList = new ScreenManagerLinkedList();
+                    break;
+                case "3":
+                    ScreenManagerQueue screenQueue = new ScreenManagerQueue();
                     break;
                 default:
                     Console.WriteLine("Bloga komanda..");
