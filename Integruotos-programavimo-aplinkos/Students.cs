@@ -11,7 +11,6 @@ namespace Integruotos_programavimo_aplinkos
 
         public void SortStudents()
         {
-            //Program.students.Sort();
             try
             {
                 Program.students = Program.students.OrderBy(o => o.name).OrderBy(o => o.surname).ToList();
