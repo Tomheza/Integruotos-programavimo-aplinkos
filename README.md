@@ -27,3 +27,79 @@ Programos efektyvumas stipriai gali priklausyti ne tik nuo naudojamo konteinerio
 - ``List<T>.Insert(int index, T item)``
 - ``List<T>.Reverse()``
 - ``List<T>.TrimExcess()``
+# Greičio tyrimai
+Visi tyrimai atlikti su 1000 rezultatų iš sugeneruoto failo 1.txt (praitų užduočių).
+Laikas užrašomas ``milisekundėmis``, ``sekundėmis``, ``minutėmis``
+# Paleistis
+Paleidus programą reikia pasirinkti iš 3 opcijų kokio tipo konteinerį naudoti
+- 1 ``List<T>``
+- 2 ``LinkedList<T>``
+- 3 ``Queue<t>``
+
+## ``List<T>``
+#### addstudentsio - adds students from file of your choice
+
+| Command        | Execution time|
+| ------------- |----------------|
+|  Read: 1.txt  | Elapsed miliseconds: 11  |
+| Txt file parse| Elapsed miliseconds: 9   |
+| Sort all lists... | Elapsed miliseconds: 22 |
+
+#### print - selected goodguys and print to file
+
+| Command        | Execution time|
+| ------------- |----------------|
+|  print - 2 save to file  |Elapsed miliseconds: 48 |
+
+
+#### print - selected badguys and print to file
+
+| Command        | Execution time|
+| ------------- |----------------|
+|  print - 3 save to file  |Elapsed miliseconds: 42 |
+
+
+## ``LinkedList<T>``
+#### addstudentsio - adds students from file of your choice
+
+| Command        | Execution time|
+| ------------- |----------------|
+|  Read: 1.txt  | Elapsed miliseconds: 3  |
+| Txt file parse| Elapsed miliseconds: 22   |
+| Sort all lists... | Elapsed miliseconds: 30 |
+
+#### print - selected goodguys and print to file
+
+| Command        | Execution time|
+| ------------- |----------------|
+|  print - 2 save to file  |Elapsed miliseconds: 46 |
+
+
+#### print - selected badguys and print to file
+
+| Command        | Execution time|
+| ------------- |----------------|
+|  print - 3 save to file  |Elapsed miliseconds: 44 |
+
+## ``Queue<T>``
+#### addstudentsio - adds students from file of your choice
+
+| Command        | Execution time|
+| ------------- |----------------|
+|  Read: 1.txt  | Elapsed miliseconds: 3  |
+| Txt file parse| Elapsed miliseconds: 18   |
+| Sort all lists... | Elapsed miliseconds: 25 |
+
+#### print - selected goodguys and print to file
+
+| Command        | Execution time|
+| ------------- |----------------|
+|  print - 2 save to file  |Elapsed miliseconds: 4 |
+
+
+#### print - selected badguys and print to file
+
+| Command        | Execution time|
+| ------------- |----------------|
+|  print - 3 save to file  |Elapsed miliseconds: 4 |
+
