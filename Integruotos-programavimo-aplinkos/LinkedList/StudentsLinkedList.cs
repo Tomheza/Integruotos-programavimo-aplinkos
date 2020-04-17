@@ -13,17 +13,7 @@ namespace Integruotos_programavimo_aplinkos.LinkedList
             try
             {
                 // bulky but reasonable method... but to much casts....
-                var temp = Program.studentsLinkedList.ToList();
-                temp = temp.OrderBy(o => o.name).OrderBy(o => o.surname).ToList();
-                
-                Program.studentsLinkedList.Clear();
-                
-                foreach (var item in temp)
-                {
-                    Program.studentsLinkedList.AddLast(item);
-                }
-
-                temp = Program.good_guys_LinkedList.ToList();
+                var temp = Program.good_guys_LinkedList.ToList();
                 temp = temp.OrderBy(o => o.name).OrderBy(o => o.surname).ToList();
                 Program.good_guys_LinkedList.Clear();
 
@@ -55,14 +45,12 @@ namespace Integruotos_programavimo_aplinkos.LinkedList
 
         public void AddStudent(StudentLinkedList stud)
         {
-            if (!Program.studentsLinkedList.Contains(stud))
-                Program.studentsLinkedList.AddLast(stud);
-
-            if (Formulas.Galutinis(stud.grade, stud.exam) < 5.0)
+           
+            if (Formulas.Galutinis(stud.grade, stud.exam) < 5.0 && !Program.bad_guys_LinkedList.Contains(stud))
             {
                 Program.bad_guys_LinkedList.AddLast(stud);
             }
-            else if (Formulas.Galutinis(stud.grade, stud.exam) >= 5.0)
+            else if (Formulas.Galutinis(stud.grade, stud.exam) >= 5.0 && !Program.good_guys_LinkedList.Contains(stud))
             {
                 Program.good_guys_LinkedList.AddLast(stud);
             }
@@ -70,12 +58,19 @@ namespace Integruotos_programavimo_aplinkos.LinkedList
 
         public void RemoveStudent(string name, string surname)
         {
-            foreach (var item in Program.studentsLinkedList)
+            foreach (var item in Program.good_guys_LinkedList)
+            {
+                if(item.name.Equals(name) && item.surname.Equals(surname))
+                {
+                    Program.good_guys_LinkedList.Remove(item);
+                }
+            }
+
+            foreach (var item in Program.bad_guys_LinkedList)
             {
                 if (item.name.Equals(name) && item.surname.Equals(surname))
                 {
-                    Program.studentsLinkedList.Remove(item);
-                    break;
+                    Program.bad_guys_LinkedList.Remove(item);
                 }
             }
         }
@@ -86,13 +81,12 @@ namespace Integruotos_programavimo_aplinkos.LinkedList
             try
             {
                 StudentLinkedList student = new StudentLinkedList(name, surname, grade, exam, grades);
-                Program.studentsLinkedList.AddLast(student);
 
-                if(Formulas.Galutinis(student.grade, student.exam) < 5.0)
+                if(Formulas.Galutinis(student.grade, student.exam) < 5.0 && !Program.bad_guys_LinkedList.Contains(student))
                 {
                     Program.bad_guys_LinkedList.AddLast(student);
                 }
-                else if(Formulas.Galutinis(student.grade, student.exam) >= 5.0)
+                else if(Formulas.Galutinis(student.grade, student.exam) >= 5.0 && !Program.bad_guys_LinkedList.Contains(student))
                 {
                     Program.good_guys_LinkedList.AddLast(student);
                 }
