@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Integruotos-programavimo-aplinkos: Integruotos-programavimo-aplinkos v0.5 versija</title>
+<title>Integruotos-programavimo-aplinkos: Integruotos-programavimo-aplinkos v1.0 versija</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -82,7 +82,7 @@ $(document).ready(function(){initNavTree('md__c_1__users_e0071444_source_repos_d
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Integruotos-programavimo-aplinkos v0.5 versija </div>  </div>
+<div class="title">Integruotos-programavimo-aplinkos v1.0 versija </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="autotoc_md1"></a>
@@ -94,14 +94,29 @@ Užduoties formuluotė</h1>
 <h3><a class="anchor" id="autotoc_md2"></a>
 Dokumentaciją galima rasti releases puslapyje parsisiuntus **&lt;tt&gt;documentation.rar (naudota Doxygen)&lt;/tt&gt;**</h3>
 <h1><a class="anchor" id="autotoc_md3"></a>
-Užduotis v0.5 versijai</h1>
+Užduotis v1.0 versijai</h1>
 <ul>
-<li><b>Konteinerių testavimas:</b> šmatuokite programos veikimo spartą (be failų generavimo (turite naudotituos pačius failus visais atvejais) ir surūšiuotų studentų išvedimą į naujus failus) priklausomai nuonaudojamo vieno iš trijų konteinerių:</li>
-<li><code>List&lt;T&gt;</code></li>
-<li><code>LinkedList&lt;T&gt;</code></li>
-<li><code>Queue&lt;T&gt;</code></li>
+<li><b>Optimizuokite studentų rūšiavimo (dalijimo) į dvi kategorijas ("vargšiukų" ir "kietiakų") realizaciją:</b> t.y. visiems trims konteinerių tipams (List, LinkedList ir Deque) išmatuokite programos veikimo spartą priklausomai nuo studentų dalijimo į dvi kategorijas strategijos:<ul>
+<li><b>1 strategija:</b> Bendro <b>studentai</b> konteinerio (vector, list ir deque tipų) skaidymas (rūšiavimas) <b>į du naujus to paties tipo konteinerius: "vargšiukų" ir "kietiakų".</b> Tokiu būdu tas pats studentas yra dvejuose konteineriuose: bendrame <b>studentai</b> ir viename iš suskaidytų **(vargšiukai arba kietiakai).** Nesunku pastebėti, kad tokia strategija yra neefektyvi užimamos atminties atžvilgiu (įsitikinkite tuo!), tačiau šiame žingsnyje svarbiausia yra patyrinėti, kaip programos veikimo sparta priklauso nuo konteinerio tipo?</li>
+<li><b>2 strategija:</b> Bendro studentų konteinerio (vector, list ir deque) skaidymas (rūšiavimas) <b>panaudojant tik vieną naują konteinerį: "vargšiukai".</b> Tokiu būdu, jei studentas yra vargšiukas, jį turime įkelti į naująjį **"vargšiukai".** Tokiu būdu, jei studentas yra vargšiukas, jį turime įkelti į naująjį **"vargšiukų"** konteinerį ir ištrinti iš bendro <b>studentai</b> konteinerio. Po šio žingsnio <b>studentai</b> konteineryje liks vien tik <b>kietiakai.</b> Atminties atveju tai efektyviau, tačiau dažni trynimai gali būti "skausmingi", ypač tam tikro tipo konteineriams.</li>
 </ul>
-<p>T.y., jeigu Jūs turite susikurę struktūrą Studentai (ar kaip jūs ją pavadinote) ir iki šiol naudojoteList&lt;Students&gt;, tai turite ištirti: ar pasikeistų ir kaip pasikeistų sparta, jei vietoje List&lt;Students&gt;naudotumėte LinkedList&lt;Students&gt; ir Queue&lt;Students&gt;. Visus tyrimus ir jų analizę aprašykite <code><a class="el" href="_r_e_a_d_m_e_8md.html">README.md</a></code> faile. </p>
+</li>
+</ul>
+<p>P.s. Jeigu Jūsų šiuo metu realizuota strategija nesutampa nė su viena iš šių dviejų aukščiau aprašytų strategijų, turėsite palyginti tris strategijas: Jūsų ir abi aukščiau aprašytas strategijas.</p>
+<p>Programos efektyvumas stipriai gali priklausyti ne tik nuo naudojamo konteinerio tipo, tačiau ir nuonaudojamų algoritmų. Susipažinkite su žemiau pateiktais algoritmais:</p>
+<ul>
+<li><code>List&lt;T&gt;.Find()</code></li>
+<li><code>List&lt;T&gt;.FindIndex()</code></li>
+<li><code>List&lt;T&gt;.BinarySearch()</code></li>
+<li><code>List&lt;T&gt;.Contains()</code></li>
+<li><code>List&lt;T&gt;.CopyTo()</code></li>
+<li><code>List&lt;T&gt;.Remove()</code></li>
+<li><code>List&lt;T&gt;.RemoveAt(int index)</code></li>
+<li><code>List&lt;T&gt;.RemoveRange (int index, int count);</code></li>
+<li><code>List&lt;T&gt;.Insert(int index, T item)</code></li>
+<li><code>List&lt;T&gt;.Reverse()</code></li>
+<li><code>List&lt;T&gt;.TrimExcess()</code> </li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
