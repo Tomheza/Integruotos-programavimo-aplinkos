@@ -1,4 +1,4 @@
-# Integruotos-programavimo-aplinkos v1.0 versija
+# Integruotos-programavimo-aplinkos v1.0 versija - ``1 strategija``
 ## Užduoties formuluotė
 > Parašykite programą, kuri nuskaito šiuos studentų duomenis:
 **`vardą`** ir **`pavardę`**
