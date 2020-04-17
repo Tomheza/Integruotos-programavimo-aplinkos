@@ -1,4 +1,4 @@
-# Integruotos-programavimo-aplinkos v1.0 versija - ``1 strategija``
+# Integruotos-programavimo-aplinkos v1.0 versija - ``2 strategija``
 ## Užduoties formuluotė
 > Parašykite programą, kuri nuskaito šiuos studentų duomenis:
 **`vardą`** ir **`pavardę`**
@@ -41,22 +41,22 @@ Paleidus programą reikia pasirinkti iš 3 opcijų kokio tipo konteinerį naudot
 
 | Command        | Execution time|
 | ------------- |----------------|
-|  Read: 1.txt  | Elapsed miliseconds: 11  |
-| Txt file parse| Elapsed miliseconds: 9   |
-| Sort all lists... | Elapsed miliseconds: 22 |
+|  Read: 1.txt  | Elapsed miliseconds: 6  |
+| Txt file parse| Elapsed miliseconds: 17   |
+| Sort all lists... | Elapsed miliseconds: 31 |
 
 #### print - selected goodguys and print to file
 
 | Command        | Execution time|
 | ------------- |----------------|
-|  print - 2 save to file  |Elapsed miliseconds: 48 |
+|  print - 2 save to file  |Elapsed miliseconds: 59 |
 
 
 #### print - selected badguys and print to file
 
 | Command        | Execution time|
 | ------------- |----------------|
-|  print - 3 save to file  |Elapsed miliseconds: 42 |
+|  print - 3 save to file  |Elapsed miliseconds: 48 |
 
 
 ## ``LinkedList<T>``
@@ -64,31 +64,31 @@ Paleidus programą reikia pasirinkti iš 3 opcijų kokio tipo konteinerį naudot
 
 | Command        | Execution time|
 | ------------- |----------------|
-|  Read: 1.txt  | Elapsed miliseconds: 3  |
-| Txt file parse| Elapsed miliseconds: 22   |
-| Sort all lists... | Elapsed miliseconds: 30 |
+|  Read: 1.txt  | Elapsed miliseconds: 4  |
+| Txt file parse| Elapsed miliseconds: 8   |
+| Sort all lists... | Elapsed miliseconds: 10 |
 
 #### print - selected goodguys and print to file
 
 | Command        | Execution time|
 | ------------- |----------------|
-|  print - 2 save to file  |Elapsed miliseconds: 46 |
+|  print - 2 save to file  |Elapsed miliseconds: 40 |
 
 
 #### print - selected badguys and print to file
 
 | Command        | Execution time|
 | ------------- |----------------|
-|  print - 3 save to file  |Elapsed miliseconds: 44 |
+|  print - 3 save to file  |Elapsed miliseconds: 47 |
 
 ## ``Queue<T>``
 #### addstudentsio - adds students from file of your choice
 
 | Command        | Execution time|
 | ------------- |----------------|
-|  Read: 1.txt  | Elapsed miliseconds: 3  |
-| Txt file parse| Elapsed miliseconds: 18   |
-| Sort all lists... | Elapsed miliseconds: 25 |
+|  Read: 1.txt  | Elapsed miliseconds: 1  |
+| Txt file parse| Elapsed miliseconds: 13   |
+| Sort all lists... | Elapsed miliseconds: 9 |
 
 #### print - selected goodguys and print to file
 
