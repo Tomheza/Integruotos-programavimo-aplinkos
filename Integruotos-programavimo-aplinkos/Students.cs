@@ -13,7 +13,6 @@ namespace Integruotos_programavimo_aplinkos
         {
             try
             {
-                Program.students = Program.students.OrderBy(o => o.name).OrderBy(o => o.surname).ToList();
                 Program.good_guys = Program.good_guys.OrderBy(o => o.name).OrderBy(o => o.surname).ToList();
                 Program.bad_guys = Program.bad_guys.OrderBy(o => o.name).OrderBy(o => o.surname).ToList();
             }
@@ -28,14 +27,11 @@ namespace Integruotos_programavimo_aplinkos
 
         public void AddStudent(Student stud)
         {
-            if(!Program.students.Contains(stud))
-                Program.students.Add(stud);
-
-            if (Formulas.Galutinis(stud.grade, stud.exam) < 5.0)
+            if (Formulas.Galutinis(stud.grade, stud.exam) < 5.0 && !Program.bad_guys.Contains(stud))
             {
                 Program.bad_guys.Add(stud);
             }
-            else if (Formulas.Galutinis(stud.grade, stud.exam) >= 5.0)
+            else if (Formulas.Galutinis(stud.grade, stud.exam) >= 5.0 && !Program.good_guys.Contains(stud))
             {
                 Program.good_guys.Add(stud);
             }
@@ -43,56 +39,36 @@ namespace Integruotos_programavimo_aplinkos
 
         public void RemoveStudent(string name, string surname)
         {
-            foreach (var item in Program.students)
+            foreach (var item in Program.good_guys)
             {
-                if (item.name.Equals(name) && item.surname.Equals(surname))
+                if(item.name.Equals(name) && item.surname.Equals(surname))
                 {
-                    Program.students.Remove(item);
+                    Program.good_guys.Remove(item);
+                    break;
+                }
+            }
+
+            foreach (var item in Program.bad_guys)
+            {
+                if(item.name.Equals(name) && item.surname.Equals(surname))
+                {
+                    Program.bad_guys.Remove(item);
                     break;
                 }
             }
         }
-        #region unused
-        /*
-        public void ChangeExamGrade(string name, string surname, double grade)
-        {
-            foreach (var item in students)
-            {
-                if (item.name.Equals(name) && item.surname.Equals(surname))
-                {
-                    item.ExamGrade = grade;
-                    break;
-                }
-            }
-        }
-
-        public void ChangeGrade(string name, string surname, double grade)
-        {
-            foreach (var item in students)
-            {
-                if (item.name.Equals(name) && item.surname.Equals(surname))
-                {
-                    item.Grade = grade;
-                    break;
-                }
-            }
-        }
-        */
-        #endregion
-
-
+       
         public void AddStudent(string name, string surname, double grade, double exam, List<double> grades)
         {
             try
             {
                 Student student = new Student(name, surname, grade, exam, grades);
-                Program.students.Add(student);
 
-                if(Formulas.Galutinis(student.grade, student.exam) < 5.0)
+                if(Formulas.Galutinis(student.grade, student.exam) < 5.0 && !Program.bad_guys.Contains(student))
                 {
                     Program.bad_guys.Add(student);
                 }
-                else if(Formulas.Galutinis(student.grade, student.exam) >= 5.0)
+                else if(Formulas.Galutinis(student.grade, student.exam) >= 5.0 && !Program.bad_guys.Contains(student))
                 {
                     Program.good_guys.Add(student);
                 }
@@ -103,32 +79,5 @@ namespace Integruotos_programavimo_aplinkos
                 Console.WriteLine("Bad student data: " + ex);
             }
         }
-
-        #region unused
-        /*
-        public void ChangeStudentName(string name, string surname, string newname)
-        {
-            foreach (var item in students)
-            {
-                if (item.name.Equals(name) && item.surname.Equals(surname))
-                {
-                    item.name = newname;
-                    break;
-                }
-            }
-        }
-
-        public void ChangeStudentSurname(string name, string surname, string newsurname)
-        {
-            foreach (var item in students)
-            {
-                if (item.name.Equals(name) && item.surname.Equals(surname))
-                {
-                    item.surname = newsurname;
-                    break;
-                }
-            }
-        }*/
-        #endregion
     }
 }

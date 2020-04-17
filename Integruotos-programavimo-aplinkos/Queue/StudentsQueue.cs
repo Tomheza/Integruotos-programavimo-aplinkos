@@ -13,17 +13,7 @@ namespace Integruotos_programavimo_aplinkos.Queue
         {
             try
             {
-                var temp = Program.studentsQueue.ToList();
-                temp = temp.OrderBy(o => o.name).OrderBy(o => o.surname).ToList();
-
-                Program.studentsQueue.Clear();
-
-                foreach (var item in temp)
-                {
-                    Program.studentsQueue.Enqueue(item);
-                }
-
-                temp = Program.good_guys_Queue.ToList();
+                var temp = Program.good_guys_Queue.ToList();
                 temp = temp.OrderBy(o => o.name).OrderBy(o => o.surname).ToList();
 
                 Program.good_guys_Queue.Clear();
@@ -58,14 +48,11 @@ namespace Integruotos_programavimo_aplinkos.Queue
 
         public void AddStudent(StudentQueue stud)
         {
-            if(!Program.studentsQueue.Contains(stud))
-                Program.studentsQueue.Enqueue(stud);
-
-            if (Formulas.Galutinis(stud.grade, stud.exam) < 5.0)
+            if (Formulas.Galutinis(stud.grade, stud.exam) < 5.0 && !Program.bad_guys_Queue.Contains(stud))
             {
                 Program.bad_guys_Queue.Enqueue(stud);
             }
-            else if (Formulas.Galutinis(stud.grade, stud.exam) >= 5.0)
+            else if (Formulas.Galutinis(stud.grade, stud.exam) >= 5.0 && Program.good_guys_Queue.Contains(stud))
             {
                 Program.good_guys_Queue.Enqueue(stud);
             }
@@ -73,7 +60,7 @@ namespace Integruotos_programavimo_aplinkos.Queue
 
         public void RemoveStudent(string name, string surname)
         {
-            var temp = Program.studentsQueue;
+            /*var temp = Program.studentsQueue;
             Program.studentsQueue.Clear();
 
             foreach (var item in Program.studentsQueue)
@@ -85,6 +72,28 @@ namespace Integruotos_programavimo_aplinkos.Queue
             }
 
             Program.studentsQueue = temp;
+            temp.Clear();*/
+
+            var temp = Program.good_guys_Queue;
+
+            foreach (var item in Program.good_guys_Queue)
+            {
+                if (!item.name.Equals(name) && !item.surname.Equals(surname))
+                    temp.Enqueue(item);
+            }
+
+            Program.good_guys_Queue = temp;
+            temp.Clear();
+
+            temp = Program.bad_guys_Queue;
+
+            foreach (var item in Program.bad_guys_Queue)
+            {
+                if (!item.name.Equals(name) && !item.surname.Equals(surname))
+                    temp.Enqueue(item);
+            }
+
+            Program.bad_guys_Queue = temp;
             temp.Clear();
 
         }
@@ -96,13 +105,12 @@ namespace Integruotos_programavimo_aplinkos.Queue
             try
             {
                 StudentQueue student = new StudentQueue(name, surname, grade, exam, grades);
-                Program.studentsQueue.Enqueue(student);
 
-                if(Formulas.Galutinis(student.grade, student.exam) < 5.0)
+                if(Formulas.Galutinis(student.grade, student.exam) < 5.0 && !Program.bad_guys_Queue.Contains(student))
                 {
                     Program.bad_guys_Queue.Enqueue(student);
                 }
-                else if(Formulas.Galutinis(student.grade, student.exam) >= 5.0)
+                else if(Formulas.Galutinis(student.grade, student.exam) >= 5.0 && !Program.good_guys_Queue.Contains(student))
                 {
                     Program.good_guys_Queue.Enqueue(student);
                 }

@@ -23,7 +23,11 @@ namespace Integruotos_programavimo_aplinkos.Queue
             for (int i = 0; i <= 48; i++)
                 Console.Write("-");
             Console.WriteLine("-");
-            foreach (var item in Program.studentsQueue)
+            foreach (var item in Program.good_guys_Queue)
+            {
+                Console.WriteLine("{0, -15} {1, -15} {2, -20}", item.name, item.surname, Formulas.Galutinis(item.grade, item.exam).ToString("0.00"));
+            }
+            foreach (var item in Program.bad_guys_Queue)
             {
                 Console.WriteLine("{0, -15} {1, -15} {2, -20}", item.name, item.surname, Formulas.Galutinis(item.grade, item.exam).ToString("0.00"));
             }
@@ -44,7 +48,11 @@ namespace Integruotos_programavimo_aplinkos.Queue
                     for (int i = 0; i <= 68; i++)
                         Console.Write("-");
                     Console.WriteLine("-");
-                    foreach (var item in Program.studentsQueue)
+                    foreach (var item in Program.good_guys_Queue)
+                    {
+                        Console.WriteLine("{0, -15} {1, -15} {2, -20} {3, -20}", item.name, item.surname, Formulas.Galutinis(item.grade, item.exam).ToString("0.00"), Formulas.Galutinis_mediana(item.grades.ToList(), item.exam).ToString("0.00"));
+                    }
+                    foreach (var item in Program.bad_guys_Queue)
                     {
                         Console.WriteLine("{0, -15} {1, -15} {2, -20} {3, -20}", item.name, item.surname, Formulas.Galutinis(item.grade, item.exam).ToString("0.00"), Formulas.Galutinis_mediana(item.grades.ToList(), item.exam).ToString("0.00"));
                     }
@@ -148,7 +156,11 @@ namespace Integruotos_programavimo_aplinkos.Queue
             for (int i = 0; i <= 48; i++)
                 Console.Write("-");
             Console.WriteLine("-");
-            foreach (var item in Program.studentsQueue)
+            foreach (var item in Program.good_guys_Queue)
+            {
+                Console.WriteLine("{0, -15} {1, -15} {2, -20}", item.name, item.surname, Formulas.Galutinis_mediana(item.grades.ToList(), item.exam).ToString("0.00"));
+            }
+            foreach (var item in Program.bad_guys_Queue)
             {
                 Console.WriteLine("{0, -15} {1, -15} {2, -20}", item.name, item.surname, Formulas.Galutinis_mediana(item.grades.ToList(), item.exam).ToString("0.00"));
             }

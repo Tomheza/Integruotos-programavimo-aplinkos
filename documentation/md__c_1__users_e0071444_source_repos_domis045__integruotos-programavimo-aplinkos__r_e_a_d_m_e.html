@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Integruotos-programavimo-aplinkos: Integruotos-programavimo-aplinkos v1.0 versija</title>
+<title>Integruotos-programavimo-aplinkos: Integruotos-programavimo-aplinkos v1.0 versija - &lt;tt&gt;1 strategija&lt;/tt&gt;</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -82,7 +82,7 @@ $(document).ready(function(){initNavTree('md__c_1__users_e0071444_source_repos_d
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Integruotos-programavimo-aplinkos v1.0 versija </div>  </div>
+<div class="title">Integruotos-programavimo-aplinkos v1.0 versija - <code>1 strategija</code> </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="autotoc_md1"></a>
@@ -117,6 +117,106 @@ Užduotis v1.0 versijai</h1>
 <li><code>List&lt;T&gt;.Reverse()</code></li>
 <li><code>List&lt;T&gt;.TrimExcess()</code> </li>
 </ul>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Greičio tyrimai</h1>
+<p>Visi tyrimai atlikti su 1000 rezultatų iš sugeneruoto failo <a class="el" href="1_8txt.html">1.txt</a> (praitų užduočių). Laikas užrašomas <code>milisekundėmis</code>, <code>sekundėmis</code>, <code>minutėmis</code> </p>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Paleistis</h1>
+<p>Paleidus programą reikia pasirinkti iš 3 opcijų kokio tipo konteinerį naudoti</p><ul>
+<li>1 <code>List&lt;T&gt;</code></li>
+<li>2 <code>LinkedList&lt;T&gt;</code></li>
+<li>3 <code>Queue&lt;t&gt;</code></li>
+</ul>
+<h2><a class="anchor" id="autotoc_md6"></a>
+&lt;tt&gt;List&lt;T&gt;&lt;/tt&gt;</h2>
+<h4><a class="anchor" id="autotoc_md7"></a>
+addstudentsio - adds students from file of your choice</h4>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Command </th><th class="markdownTableHeadNone">Execution time  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Read: <a class="el" href="1_8txt.html">1.txt</a> </td><td class="markdownTableBodyNone">Elapsed miliseconds: 11  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Txt file parse </td><td class="markdownTableBodyNone">Elapsed miliseconds: 9  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Sort all lists... </td><td class="markdownTableBodyNone">Elapsed miliseconds: 22  </td></tr>
+</table>
+<h4><a class="anchor" id="autotoc_md8"></a>
+print - selected goodguys and print to file</h4>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Command </th><th class="markdownTableHeadNone">Execution time  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">print - 2 save to file </td><td class="markdownTableBodyNone">Elapsed miliseconds: 48  </td></tr>
+</table>
+<h4><a class="anchor" id="autotoc_md9"></a>
+print - selected badguys and print to file</h4>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Command </th><th class="markdownTableHeadNone">Execution time  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">print - 3 save to file </td><td class="markdownTableBodyNone">Elapsed miliseconds: 42  </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md10"></a>
+&lt;tt&gt;LinkedList&lt;T&gt;&lt;/tt&gt;</h2>
+<h4><a class="anchor" id="autotoc_md11"></a>
+addstudentsio - adds students from file of your choice</h4>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Command </th><th class="markdownTableHeadNone">Execution time  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Read: <a class="el" href="1_8txt.html">1.txt</a> </td><td class="markdownTableBodyNone">Elapsed miliseconds: 3  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Txt file parse </td><td class="markdownTableBodyNone">Elapsed miliseconds: 22  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Sort all lists... </td><td class="markdownTableBodyNone">Elapsed miliseconds: 30  </td></tr>
+</table>
+<h4><a class="anchor" id="autotoc_md12"></a>
+print - selected goodguys and print to file</h4>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Command </th><th class="markdownTableHeadNone">Execution time  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">print - 2 save to file </td><td class="markdownTableBodyNone">Elapsed miliseconds: 46  </td></tr>
+</table>
+<h4><a class="anchor" id="autotoc_md13"></a>
+print - selected badguys and print to file</h4>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Command </th><th class="markdownTableHeadNone">Execution time  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">print - 3 save to file </td><td class="markdownTableBodyNone">Elapsed miliseconds: 44  </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md14"></a>
+&lt;tt&gt;Queue&lt;T&gt;&lt;/tt&gt;</h2>
+<h4><a class="anchor" id="autotoc_md15"></a>
+addstudentsio - adds students from file of your choice</h4>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Command </th><th class="markdownTableHeadNone">Execution time  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Read: <a class="el" href="1_8txt.html">1.txt</a> </td><td class="markdownTableBodyNone">Elapsed miliseconds: 3  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Txt file parse </td><td class="markdownTableBodyNone">Elapsed miliseconds: 18  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Sort all lists... </td><td class="markdownTableBodyNone">Elapsed miliseconds: 25  </td></tr>
+</table>
+<h4><a class="anchor" id="autotoc_md16"></a>
+print - selected goodguys and print to file</h4>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Command </th><th class="markdownTableHeadNone">Execution time  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">print - 2 save to file </td><td class="markdownTableBodyNone">Elapsed miliseconds: 4  </td></tr>
+</table>
+<h4><a class="anchor" id="autotoc_md17"></a>
+print - selected badguys and print to file</h4>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Command </th><th class="markdownTableHeadNone">Execution time  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">print - 3 save to file </td><td class="markdownTableBodyNone">Elapsed miliseconds: 4  </td></tr>
+</table>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

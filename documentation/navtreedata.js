@@ -23,9 +23,21 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "Integruotos-programavimo-aplinkos", "index.html", [
-    [ "Integruotos-programavimo-aplinkos v1.0 versija", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html", [
+    [ "Integruotos-programavimo-aplinkos v1.0 versija - <tt>1 strategija</tt>", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html", [
       [ "Užduoties formuluotė", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md1", null ],
-      [ "Užduotis v1.0 versijai", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md3", null ]
+      [ "Užduotis v1.0 versijai", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md3", null ],
+      [ "Greičio tyrimai", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md4", null ],
+      [ "Paleistis", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md5", [
+        [ "<tt>List<T></tt>", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md6", [
+          [ "Dokumentaciją galima rasti releases puslapyje parsisiuntus **<tt>documentation.rar (naudota Doxygen)</tt>**", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md2", [
+            [ "addstudentsio - adds students from file of your choice", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md7", null ],
+            [ "print - selected goodguys and print to file", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md8", null ],
+            [ "print - selected badguys and print to file", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md9", null ]
+          ] ]
+        ] ],
+        [ "<tt>LinkedList<T></tt>", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md10", null ],
+        [ "<tt>Queue<T></tt>", "md__c_1__users_e0071444_source_repos_domis045__integruotos-programavimo-aplinkos__r_e_a_d_m_e.html#autotoc_md14", null ]
+      ] ]
     ] ],
     [ "Packages", "namespaces.html", [
       [ "Packages", "namespaces.html", "namespaces_dup" ]

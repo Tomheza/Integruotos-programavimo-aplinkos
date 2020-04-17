@@ -10,17 +10,14 @@ namespace Integruotos_programavimo_aplinkos
     class Program
     {
         // Regular lists
-        public static List<Student> students = new List<Student>();
         public static List<Student> good_guys = new List<Student>();
         public static List<Student> bad_guys = new List<Student>();
 
         // Linkedlists
-        public static LinkedList<StudentLinkedList> studentsLinkedList = new LinkedList<StudentLinkedList>();
         public static LinkedList<StudentLinkedList> good_guys_LinkedList = new LinkedList<StudentLinkedList>();
         public static LinkedList<StudentLinkedList> bad_guys_LinkedList = new LinkedList<StudentLinkedList>();
 
         //Queue
-        public static Queue<StudentQueue> studentsQueue = new Queue<StudentQueue>();
         public static Queue<StudentQueue> good_guys_Queue = new Queue<StudentQueue>();
         public static Queue<StudentQueue> bad_guys_Queue = new Queue<StudentQueue>();
 
